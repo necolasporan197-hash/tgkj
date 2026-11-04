@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:background="@drawable/_bg_rz_safe_check" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="44.0dip" />
+            <ImageView android:layout_gravity="center_horizontal" android:layout_width="89.0dip" android:layout_height="74.0dip" android:layout_marginTop="95.0dip" android:src="@drawable/ys_time" />
+        </FrameLayout>
+        <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="#ff30302f" android:gravity="center_horizontal" android:id="@id/tv_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="27.0dip" android:layout_marginRight="27.0dip" android:text="操作太频繁了，完成验证后休息一下吧，继续频繁操作将有封号风险！" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="27.0dip" android:layout_marginTop="24.0dip">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/aqyz_ys" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff828282" android:gravity="center_vertical" android:layout_width="207.0dip" android:layout_height="27.0dip" android:layout_marginLeft="5.0dip" android:text="拖动下面滑块完成拼图" />
+        </LinearLayout>
+        <com.sheguo.tggy.view.captcha.CustomCaptcha android:id="@id/captCha" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

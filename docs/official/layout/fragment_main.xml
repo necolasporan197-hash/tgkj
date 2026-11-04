@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/exo_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <com.ogaclejapan.smarttablayout.SmartTabLayout android:id="@id/tab_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" app:stl_defaultTabBackground="@color/transparent" app:stl_defaultTabTextAllCaps="false" app:stl_dividerThickness="0.0dip" app:stl_indicatorColor="#ffff731c" app:stl_indicatorCornerRadius="3.0dip" app:stl_indicatorThickness="4.0dip" app:stl_indicatorWidth="13.0dip" app:stl_titleOffset="26.0dip" app:stl_underlineThickness="0.0dip" />
+        <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:id="@id/search" android:layout_width="15.0dip" android:layout_height="15.0dip" android:src="@drawable/ic_nav__search__n" />
+            <TextView android:textSize="13.0sp" android:textColor="#ff61605f" android:id="@id/main_city" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:text="长沙" android:drawablePadding="6.0dip" android:drawableEnd="@drawable/ic_nav_arrow_n" />
+            <ImageView android:id="@id/main_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_nav_tit_n" android:layout_centerHorizontal="true" />
+        </LinearLayout>
+        <ImageView android:gravity="center" android:id="@id/sexlogo_view" android:padding="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_home_female_n" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="36.0dip" android:layout_marginTop="5.0dip">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_rnrz" android:background="#fffff4ed" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="30.0dip">
+            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:src="@drawable/ic_home_prompt_n" />
+            <com.sheguo.tggy.view.widget.MarqueeTextView android:textSize="12.0sp" android:textColor="#fffa8c51" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/content" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="你还未进行人脸识别认证，认证后可享更多权限哦～" android:singleLine="true" android:layout_weight="1.0" />
+            <TextView android:textSize="10.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_zrrz" android:background="@drawable/main_dingwei_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="23.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="30.0dip" android:minWidth="54.0dip" android:minHeight="23.0dip" android:text="立即认证" />
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="center_vertical" android:id="@id/ll_dingwei" android:background="#fffff4ed" android:layout_width="fill_parent" android:layout_height="30.0dip">
+            <LinearLayout android:orientation="horizontal" android:background="#fffff4ed" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:layout_width="9.0dip" android:layout_height="10.0dip" android:layout_marginLeft="15.0dip" android:src="@drawable/ic_home_dw" />
+                <androidx.appcompat.widget.AppCompatTextView android:textColor="#fffa8c51" android:gravity="left" android:layout_gravity="center" android:id="@id/tv_location_content" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="开启定位后，查看附近优质异性" android:maxLines="1" android:layout_weight="1.0" app:autoSizeMaxTextSize="12.0sp" app:autoSizeMinTextSize="10.0sp" app:autoSizeTextType="uniform" />
+                <TextView android:textSize="10.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_location_btn" android:background="@drawable/main_dingwei_bg" android:layout_width="wrap_content" android:layout_height="23.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="30.0dip" android:minWidth="54.0dip" android:minHeight="23.0dip" android:text="立即开启" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="center|right|top" android:id="@id/dingwei_close" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_gb_2" />
+        </FrameLayout>
+        <TextView android:textSize="12.0sp" android:textColor="#ffc9bdb4" android:layout_gravity="center_horizontal" android:id="@id/tv_no_user" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="— 当前城市未找到匹配用户，已推荐距离相近的人  —" />
+    </FrameLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

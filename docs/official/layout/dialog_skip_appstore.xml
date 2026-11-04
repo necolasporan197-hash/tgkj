@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:id="@id/carview" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardCornerRadius="15.0dip" app:cardElevation="0.0dip">
+        <LinearLayout android:orientation="vertical" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/icon" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/pop_pop_pj" android:scaleType="fitXY" />
+            <TextView android:textSize="16.0sp" android:textColor="#ff30302f" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/tv_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="34.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="34.0dip" />
+            <com.sheguo.tggy.view.widget.NextButton android:id="@id/second_next" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="32.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="32.0dip" android:layout_marginBottom="39.0dip" app:nextBg="@drawable/button_ff8800" app:nextSize="16.0sp" app:text="立即去评价" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <ImageView android:layout_gravity="center|right|top" android:id="@id/close_dialog" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pop_lose_n" />
+</FrameLayout>

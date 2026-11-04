@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardCornerRadius="18.0dip" app:cardElevation="0.0dip">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/pop_tp_top" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="24.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.sheguo.tggy.view.widget.round.CircleImageView android:id="@id/avatar_image_view" android:layout_width="72.0dip" android:layout_height="72.0dip" app:round_borderColor="@color/color_FFFFFF" app:round_borderWidth="2.0dip" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_marginTop="14.0dip" android:layout_marginRight="40.0dip">
+                    <View android:background="#ffededed" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff1c1c1c" android:id="@id/nickname_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip" android:text="我的评价" android:maxLines="1" />
+                    <View android:background="#ffededed" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+                </LinearLayout>
+                <ImageView android:id="@id/vip_view" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="1.0dip" />
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff1c1c1c" android:id="@id/good_comment_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:text="好评" android:drawableLeft="@drawable/image__hp" android:drawablePadding="10.0dip" />
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/good_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="14.0dip" android:layout_marginRight="20.0dip" />
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff1c1c1c" android:id="@id/bad_comment_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="差评" android:drawableLeft="@drawable/image__cp" android:drawablePadding="10.0dip" />
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/bad_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="14.0dip" android:layout_marginRight="20.0dip" />
+                <com.sheguo.tggy.view.widget.NextButton android:id="@id/ok_gradient_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="20.0dip" app:selected="false" app:text="匿名提交" app:textSize="18.0sp" />
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+    <ImageView android:layout_gravity="right" android:id="@id/iv_close" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icons_popup_close" />
+</FrameLayout>

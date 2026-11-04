@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#fff8f8f8" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:background="#ffffffff" android:paddingTop="44.0dip" android:layout_width="fill_parent" android:layout_height="94.0dip" app:centerText="消息通知" />
+    <com.sheguo.tggy.activity.ui.wiget.CheckItemView android:id="@id/chat_simple_item_view" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="10.0dip" app:text="私聊通知" />
+    <com.sheguo.tggy.activity.ui.wiget.CheckItemView android:id="@id/tcdt_simple_item_view" android:layout_width="fill_parent" android:layout_height="60.0dip" app:text="同城动态" />
+    <com.sheguo.tggy.activity.ui.wiget.CheckItemView android:id="@id/xtxx_simple_item_view" android:layout_width="fill_parent" android:layout_height="60.0dip" app:text="系统消息" />
+    <com.sheguo.tggy.activity.ui.wiget.CheckItemView android:id="@id/sytx_simple_item_view" android:layout_width="fill_parent" android:layout_height="60.0dip" app:text="收益提醒" />
+    <com.sheguo.tggy.activity.ui.wiget.CheckItemView android:id="@id/sklw_simple_item_view" android:layout_width="fill_parent" android:layout_height="60.0dip" app:text="谁看了我" />
+    <com.sheguo.tggy.activity.ui.wiget.CheckItemView android:id="@id/bmtz_simple_item_view" android:layout_width="fill_parent" android:layout_height="60.0dip" app:text="报名通知" />
+    <TextView android:textSize="13.0sp" android:textColor="#ffb9b9b9" android:id="@id/message_tips" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="22.0dip" android:layout_marginRight="15.0dip" android:text="Tip: 关闭所选通知后，则只在糖果空间APP中显示，不会在外部进行推送。请酌情关闭通知，以免错过重要消息。" />
+</LinearLayout>

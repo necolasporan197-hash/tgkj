@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="#fff9f9f9" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.hjq.shape.layout.ShapeLinearLayout android:orientation="vertical" android:id="@id/content" android:paddingBottom="26.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff181716" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:text="基本信息" />
+            <FrameLayout android:gravity="center_horizontal" android:layout_gravity="left" android:orientation="vertical" android:id="@id/avatar_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="19.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="20.0dip">
+                <com.sheguo.tggy.view.widget.round.RoundImageView android:id="@id/avatar_image_view" android:layout_width="126.0dip" android:layout_height="126.0dip" app:leftBottomRadius="10.0dip" app:leftTopRadius="10.0dip" app:rightBottomRadius="10.0dip" app:rightTopRadius="10.0dip" />
+                <ImageView android:layout_gravity="bottom|center|right" android:layout_width="58.0dip" android:layout_height="17.0dip" android:layout_marginRight="2.0dip" android:layout_marginBottom="2.0dip" android:src="@drawable/pic_xgzl_ghtx" />
+            </FrameLayout>
+        </LinearLayout>
+        <com.hjq.shape.layout.ShapeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginRight="7.0dip" app:shape_radius="10.0dip" app:shape_solidColor="@color/exo_white">
+            <com.hjq.shape.layout.ShapeLinearLayout android:gravity="center_vertical" android:id="@id/ll_name_invalid" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="54.0dip" app:shape_topLeftRadius="10.0dip" app:shape_topRightRadius="10.0dip">
+                <TextView android:textSize="14.0sp" android:textColor="#ff30302f" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="昵称" android:maxLines="1" />
+                <EditText android:textSize="13.0sp" android:textColor="#ff828282" android:textColorHint="#ff828282" android:gravity="center|right" android:id="@id/et_name" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="15.0dip" android:hint="请输入昵称" android:singleLine="true" android:maxLength="8" android:layout_weight="1.0" />
+                <TextView android:textSize="13.0sp" android:textColor="#ffc4c3bb" android:id="@id/tv_limit" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="0/9" />
+            </com.hjq.shape.layout.ShapeLinearLayout>
+            <FrameLayout android:id="@id/fl_name_invalid" android:background="#fff9f9f9" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="28.0dip">
+                <TextView android:textSize="13.0sp" android:textColor="#ffff6b6b" android:gravity="center|right" android:layout_gravity="right" android:id="@id/tv_invalid_content" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="28.0dip" android:text="包含违规内容，请重新填写" android:drawableLeft="@drawable/ic_register_xh_n" android:drawablePadding="10.0dip" />
+            </FrameLayout>
+            <com.hjq.shape.layout.ShapeLinearLayout android:gravity="center_vertical" android:id="@id/ll_age" android:layout_width="fill_parent" android:layout_height="54.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip">
+                <TextView android:textSize="14.0sp" android:textColor="#ff30302f" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="年龄" android:maxLines="1" />
+                <TextView android:textSize="13.0sp" android:textColor="#ff828282" android:gravity="right" android:id="@id/tv_age" android:paddingRight="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="请选择年龄" android:layout_weight="1.0" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/item_view_arrow_gray" />
+            </com.hjq.shape.layout.ShapeLinearLayout>
+        </com.hjq.shape.layout.ShapeLinearLayout>
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff181716" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="17.0dip" android:layout_marginBottom="12.0dip" android:text="更多信息" />
+        <com.hjq.shape.layout.ShapeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginRight="7.0dip" app:shape_radius="10.0dip" app:shape_solidColor="@color/exo_white">
+            <com.hjq.shape.layout.ShapeLinearLayout android:gravity="center_vertical" android:id="@id/ll_city" android:layout_width="fill_parent" android:layout_height="54.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip">
+                <TextView android:textSize="14.0sp" android:textColor="#ff30302f" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="城市" android:maxLines="1" />
+                <TextView android:textSize="13.0sp" android:textColor="#ff828282" android:gravity="right" android:id="@id/tv_city" android:paddingRight="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="请选择所在城市" android:layout_weight="1.0" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/item_view_arrow_gray" />
+            </com.hjq.shape.layout.ShapeLinearLayout>
+            <View android:background="@color/color_F4F4F4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" />
+            <com.hjq.shape.layout.ShapeLinearLayout android:gravity="center_vertical" android:id="@id/ll_job" android:layout_width="fill_parent" android:layout_height="54.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip">
+                <TextView android:textSize="14.0sp" android:textColor="#ff30302f" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="职业" android:maxLines="1" />
+                <TextView android:textSize="13.0sp" android:textColor="#ff828282" android:gravity="right" android:id="@id/tv_job" android:paddingRight="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="请选择你的职业" android:layout_weight="1.0" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/item_view_arrow_gray" />
+            </com.hjq.shape.layout.ShapeLinearLayout>
+            <View android:background="@color/color_F4F4F4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" />
+            <com.hjq.shape.layout.ShapeLinearLayout android:gravity="center_vertical" android:id="@id/ll_tag" android:layout_width="fill_parent" android:layout_height="54.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip">
+                <TextView android:textSize="14.0sp" android:textColor="#ff30302f" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="个性标签" android:maxLines="1" />
+                <com.sheguo.tggy.view.widget.MarqueeTextView android:textSize="13.0sp" android:textColor="#ff828282" android:ellipsize="marquee" android:gravity="right" android:id="@id/tv_tag" android:paddingRight="5.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="请选择个性标签" android:scrollHorizontally="true" android:singleLine="true" android:layout_weight="1.0" android:marqueeRepeatLimit="marquee_forever" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/item_view_arrow_gray" />
+            </com.hjq.shape.layout.ShapeLinearLayout>
+        </com.hjq.shape.layout.ShapeLinearLayout>
+        <com.hjq.shape.view.ShapeTextView android:textSize="19.0sp" android:gravity="center" android:id="@id/next_button" android:visibility="gone" android:layout_marginTop="30.0dip" android:text="开始交友" app:shape_radius="24.0dip" app:shape_solidColor="#ff191919" app:shape_solidDisabledColor="#ffcbcbcb" app:shape_textColor="#ffffffff" app:shape_textDisabledColor="#ff52635a" style="@style/next_button_style" />
+    </com.hjq.shape.layout.ShapeLinearLayout>
+</ScrollView>

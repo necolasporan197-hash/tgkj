@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#fff6f6f6" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="15.0dip" android:paddingRight="17.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="17.0dip">
+        <ImageView android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/wdkq_kq" />
+        <TextView android:textSize="13.0sp" android:textColor="#ff30302f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="剩余卡券：" />
+        <TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="#ff30302f" android:id="@id/shengyu" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="0" android:layout_weight="1.0" />
+        <ImageView android:id="@id/iv_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/kq_explain" />
+    </LinearLayout>
+    <com.hjq.shape.layout.ShapeFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="16.0dip" app:shape_solidColor="@color/exo_white" app:shape_topLeftRadius="15.0dip" app:shape_topRightRadius="15.0dip">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.hjq.shape.layout.ShapeFrameLayout>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@color/black" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_marginTop="40.0dip">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_back" android:padding="15.0dip" android:layout_width="38.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_nav_arrow_detail_n" />
+        <TextView android:textSize="17.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/stock_name" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="图片裁剪" android:layout_centerInParent="true" />
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/bt_ok" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="7.0dip" android:text="上传" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:textSize="12.0sp" android:textColor="#ff919191" android:gravity="center_vertical" android:background="@drawable/pic_ds" android:paddingLeft="15.0dip" android:layout_width="fill_parent" android:layout_height="36.0dip" android:text="Tip：可用手指拖动照片调整照片最佳裁剪区域哦~" />
+    <com.evan.wang.view.ClipViewLayout android:id="@id/clipViewLayout1" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:clipBorderWidth="2.0dip" app:clipType="circle" app:mHorizontalPadding="30.0dip" />
+    <com.evan.wang.view.ClipViewLayout android:id="@id/clipViewLayout2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:clipBorderWidth="2.0dip" app:clipType="rectangle" app:mHorizontalPadding="30.0dip" />
+    <RelativeLayout android:id="@id/bottom" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="60.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:gravity="start|center" android:id="@id/btn_cancel" android:paddingLeft="15.0dip" android:paddingRight="0.0dip" android:visibility="gone" android:layout_width="80.0dip" android:layout_height="fill_parent" android:text="取消" android:layout_alignParentLeft="true" android:paddingStart="15.0dip" android:paddingEnd="0.0dip" android:layout_alignParentStart="true" />
+        <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:gravity="end|center" android:paddingLeft="0.0dip" android:paddingRight="15.0dip" android:visibility="gone" android:layout_width="80.0dip" android:layout_height="fill_parent" android:text="选取" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:paddingStart="0.0dip" android:paddingEnd="15.0dip" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

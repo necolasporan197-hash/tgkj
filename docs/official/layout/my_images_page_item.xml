@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:elevation="0.0dip" app:cardBackgroundColor="@color/transparent" app:cardCornerRadius="10.0dip" app:cardElevation="0.0dip">
+        <com.sheguo.tggy.view.widget.SquareImageView android:id="@id/image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <TextView android:textSize="11.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="bottom" android:id="@id/desc" android:background="#21252525" android:layout_width="fill_parent" android:layout_height="19.0dip" />
+        <ImageView android:id="@id/benren" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/homepage_brbq" />
+        <ImageView android:layout_gravity="bottom" android:id="@id/iv_yhjf" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pic_photo_yhjf" />
+    </androidx.cardview.widget.CardView>
+    <ImageView android:id="@id/iv_video_play" android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@drawable/video_play_normal" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/delete_view" android:paddingLeft="10.0dip" android:paddingBottom="10.0dip" android:visibility="visible" android:layout_width="28.0dip" android:layout_height="28.0dip" android:src="@drawable/photo_close" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

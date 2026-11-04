@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjq.shape.layout.ShapeRelativeLayout android:orientation="vertical" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_top_tips" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_below="@id/iv_logo_text">
+        <ImageView android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/app_icon" />
+        <FrameLayout android:background="@drawable/zc_regiest_top" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_marginLeft="11.0dip">
+            <TextView android:textSize="13.0sp" android:textColor="#ff30302f" android:layout_gravity="center" android:paddingLeft="5.0dip" android:paddingRight="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="完善交友资料，为您匹配更多优质用户" />
+        </FrameLayout>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="21.0dip" android:layout_marginBottom="110.0dip" android:layout_below="@id/ll_top_tips" />
+    <include android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginBottom="36.0dip" android:layout_alignParentBottom="true" layout="@layout/create_info_bottom" />
+</com.hjq.shape.layout.ShapeRelativeLayout>

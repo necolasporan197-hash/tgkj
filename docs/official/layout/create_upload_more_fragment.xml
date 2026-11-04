@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rootView" android:paddingLeft="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_top_tips" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_below="@id/iv_logo_text">
+        <ImageView android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/app_icon" />
+        <FrameLayout android:background="@drawable/zc_regiest_top" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_marginLeft="11.0dip">
+            <TextView android:textSize="13.0sp" android:textColor="#ff30302f" android:layout_gravity="center" android:paddingLeft="5.0dip" android:paddingRight="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="上传更多靓照，可以得到更多青睐哦" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="top" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/llTags" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="9.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="12.0dip" android:layout_weight="1.0" />
+    <include android:id="@id/llBottom" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="50.0dip" android:layout_marginRight="35.0dip" android:layout_marginBottom="40.0dip" layout="@layout/create_info_bottom" />
+</LinearLayout>

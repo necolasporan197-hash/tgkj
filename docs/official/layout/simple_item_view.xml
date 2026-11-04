@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="61.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/ll_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="60.0dip" style="@style/main_margin">
+        <ImageView android:id="@id/image_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" />
+        <TextView android:textSize="14.0sp" android:textColor="#ff494949" android:gravity="center_vertical" android:id="@id/title_text_view" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="15.0dip" android:maxLines="1" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffcecece" android:gravity="center_vertical" android:id="@id/subtitle_text_view" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="4.0dip" android:maxLines="1" />
+        <LinearLayout android:gravity="center|right" android:layout_gravity="center|right" android:orientation="horizontal" android:id="@id/custom_linear_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="60.0dip" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center" android:id="@id/image_check_fail" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/pic_shsb" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffb9b9b9" android:ellipsize="marquee" android:id="@id/rightTitle" android:focusable="true" android:focusableInTouchMode="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="220.0dip" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" />
+        <ImageView android:id="@id/arrow_image_view" android:visibility="visible" android:layout_width="15.0dip" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:src="@drawable/item_view_arrow_gray" android:scaleType="centerInside" />
+        <ImageView android:id="@id/select_box_view" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:src="@drawable/ic_register_label_n" android:scaleType="centerInside" />
+        <ImageView android:id="@id/select_box_blue_view" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:src="@drawable/select_box_blue" android:scaleType="centerInside" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/exLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+    <include android:id="@id/divider_view" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" layout="@layout/divider_layout" />
+</LinearLayout>

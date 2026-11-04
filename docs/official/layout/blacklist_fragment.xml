@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.sheguo.tggy.view.widget.ThemedSwipeRefreshLayout android:id="@id/swipe_refresh_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="80.0dip" android:layout_weight="1.0">
+        <com.sheguo.tggy.view.widget.StateLayout android:id="@id/state_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.sheguo.tggy.view.widget.StateLayout>
+    </com.sheguo.tggy.view.widget.ThemedSwipeRefreshLayout>
+</LinearLayout>

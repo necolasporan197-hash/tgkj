@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="72.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sheguo.tggy.view.widget.round.CircleImageView android:id="@id/ivIcon" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="15.0dip" android:src="@drawable/default_avatar" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+            <TextView android:textSize="15.0sp" android:textColor="#ff30302f" android:id="@id/phone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageView android:id="@id/vipImg" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:textSize="13.0sp" android:textColor="#ff9e9e9e" android:id="@id/reward" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="7.0dip" android:layout_marginRight="20.0dip" />
+    </LinearLayout>
+    <TextView android:textSize="19.0sp" android:textColor="#ff1ed13b" android:gravity="center" android:id="@id/amount" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="15.0dip" android:text="" />
+</LinearLayout>

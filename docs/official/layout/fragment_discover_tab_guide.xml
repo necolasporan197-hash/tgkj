@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/guide_root" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="bottom|center" android:id="@id/guide_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/pic_guidance2" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@null" />
+</FrameLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:orientation="vertical" android:background="@color/color_FFFFFF" android:layout_width="375.0dip" android:layout_height="wrap_content" android:layout_marginLeft="23.0dip" android:layout_marginRight="23.0dip" app:cardCornerRadius="15.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/pic_tips_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/share_pic_pop_yq" android:scaleType="centerCrop" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff30302f" android:gravity="center" android:layout_gravity="center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="39.0dip" android:layout_marginBottom="12.0dip" android:text="免费私聊次数已用尽" />
+        <TextView android:textSize="14.0sp" android:textColor="#ff787776" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/message_text_view" android:layout_width="263.0dip" android:layout_height="wrap_content" android:text="成功邀请好友注册即可获得免费解锁次数" />
+        <ImageView android:layout_gravity="center" android:id="@id/contentIcon" android:layout_width="275.0dip" android:layout_height="78.0dip" android:layout_marginTop="24.0dip" android:src="@drawable/share_pic_pop_js" />
+        <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="39.0dip">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/share_wechat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="27.0dip">
+                <ImageView android:layout_width="49.0dip" android:layout_height="49.0dip" android:src="@drawable/share_new_wechat" android:scaleType="centerInside" />
+                <TextView android:textSize="13.0sp" android:textColor="#ff61605f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="微信" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/share_comment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="27.0dip">
+                <ImageView android:layout_width="49.0dip" android:layout_height="49.0dip" android:src="@drawable/share_new_wechat_moments" android:scaleType="centerInside" />
+                <TextView android:textSize="13.0sp" android:textColor="#ff61605f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="朋友圈" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/share_save_local" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="27.0dip">
+                <ImageView android:layout_width="49.0dip" android:layout_height="49.0dip" android:src="@drawable/ic_pop_local_n" android:scaleType="centerInside" />
+                <TextView android:textSize="13.0sp" android:textColor="#ff61605f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="保存" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/share_save_link" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="49.0dip" android:layout_height="49.0dip" android:src="@drawable/share_icon_save_link" android:scaleType="centerInside" />
+                <TextView android:textSize="13.0sp" android:textColor="#ff61605f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="复制链接" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_gravity="center|right|top" android:id="@id/close_dialog" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pop_lose_n" />
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.sheguo.tggy.view.widget.ThemedSwipeRefreshLayout android:id="@id/swipe_refresh_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.sheguo.tggy.view.widget.StateLayout android:id="@id/state_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:paddingTop="20.0dip" android:paddingBottom="100.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="bottom" android:background="@drawable/bg_profile_ditu_n" android:layout_width="fill_parent" android:layout_height="90.0dip">
+                    <com.hjq.shape.view.ShapeTextView android:textSize="16.0sp" android:textStyle="bold" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_get_daoju" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginLeft="33.0dip" android:layout_marginRight="33.0dip" android:text="获取道具" app:shape_radius="15.0dip" app:shape_solidColor="#ffff731c" app:shape_textColor="#ffffffff" />
+                </LinearLayout>
+            </FrameLayout>
+        </com.sheguo.tggy.view.widget.StateLayout>
+    </com.sheguo.tggy.view.widget.ThemedSwipeRefreshLayout>
+</LinearLayout>

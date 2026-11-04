@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="0.0dip" app:cardCornerRadius="3.0dip" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.business.widget.RadiusImageView android:id="@id/item_photo" android:layout_width="182.0dip" android:layout_height="218.0dip" android:scaleType="centerCrop" app:riv_corner_radius="8.0dip" />
+    <com.business.widget.RadiusImageView android:id="@id/item_photo1" android:layout_width="248.0dip" android:layout_height="186.0dip" android:scaleType="centerCrop" app:riv_corner_radius="8.0dip" />
+    <ImageView android:layout_gravity="center" android:id="@id/iv_play" android:visibility="gone" android:layout_width="38.0dip" android:layout_height="38.0dip" android:src="@drawable/video_click_play_selector" />
+</androidx.cardview.widget.CardView>

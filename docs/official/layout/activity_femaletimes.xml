@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:id="@id/scroll_layout" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/rl_bg" android:background="@drawable/female_times_bg" android:layout_width="fill_parent" android:layout_height="243.0dip">
+                <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" app:centerText="聊天加次包" />
+                <ImageView android:id="@id/iv_start_tag" android:layout_width="103.0dip" android:layout_height="96.0dip" android:layout_marginTop="-10.0dip" android:layout_marginRight="21.0dip" android:layout_below="@id/title_bar" android:layout_alignParentRight="true" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_remindCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip" android:layout_marginTop="20.0dip" android:layout_below="@id/title_bar">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/ll_has_count" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="@dimen/size_15_sp" android:textStyle="bold" android:textColor="@color/exo_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:text="私聊加次包剩余" />
+                        <TextView android:textSize="27.0sp" android:textStyle="bold" android:textColor="#fff9f200" android:id="@id/remindCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="18" />
+                        <TextView android:textSize="@dimen/size_15_sp" android:textStyle="bold" android:textColor="@color/exo_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="次" />
+                    </LinearLayout>
+                    <LinearLayout android:id="@id/ll_not_count" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="购买加次包 激活" />
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#fff9f700" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="【达人勋章】" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:textSize="13.0sp" android:textColor="#bbffffff" android:id="@id/tv_sub_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip" android:layout_marginTop="3.0dip" android:layout_below="@id/ll_remindCount" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_content_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="175.0dip">
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:background="@drawable/shape_bg_corner_fbe4d9" android:paddingTop="7.0dip" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginRight="7.0dip" android:backgroundTint="@color/exo_white" />
+                <com.sheguo.tggy.view.widget.NextButton android:layout_gravity="center" android:id="@id/pay_button" android:layout_width="315.0dip" android:layout_height="48.0dip" android:layout_marginTop="30.0dip" app:text="立即购买" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="15.0dip">
+                    <View android:background="@drawable/balance_pay_bg" android:layout_width="5.0dip" android:layout_height="11.0dip" />
+                    <TextView android:textSize="16.0sp" android:textColor="#ff61605f" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="权益说明" android:layout_weight="1.0" />
+                </LinearLayout>
+                <TextView android:textSize="14.0sp" android:textColor="#ff9e9e9e" android:id="@id/desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="20.0dip" android:lineSpacingExtra="4.0dip" android:lineSpacingMultiplier="1.2" />
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

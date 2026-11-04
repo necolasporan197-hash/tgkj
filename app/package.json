@@ -1,0 +1,26 @@
+{
+  "name": "tangguo-app",
+  "version": "4.8.2",
+  "private": true,
+  "description": "糖果空间 (com.sheguo.tggy v4.8.2 逆向复刻) —— uni-app 客户端",
+  "scripts": {
+    "dev:h5": "uni",
+    "build:h5": "uni build",
+    "dev:app": "uni -p app",
+    "build:app": "uni build -p app"
+  },
+  "dependencies": {
+    "@dcloudio/uni-app": "3.0.0-alpha-5030220261016001",
+    "@dcloudio/uni-app-plus": "3.0.0-alpha-5030220261016001",
+    "@dcloudio/uni-components": "3.0.0-alpha-5030220261016001",
+    "@dcloudio/uni-h5": "3.0.0-alpha-5030220261016001",
+    "vue": "3.4.21"
+  },
+  "devDependencies": {
+    "@dcloudio/uni-cli-shared": "3.0.0-alpha-5030220261016001",
+    "@dcloudio/vite-plugin-uni": "3.0.0-alpha-5030220261016001",
+    "@vue/runtime-core": "3.4.21",
+    "sass": "^1.77.8",
+    "vite": "5.2.8"
+  }
+}

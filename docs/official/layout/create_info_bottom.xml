@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/bottom_back" android:layout_width="wrap_content" android:layout_height="50.0dip" android:src="@drawable/pic_register_back" />
+    <com.hjq.shape.view.ShapeTextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff828282" android:gravity="center" android:id="@id/tv_skip" android:visibility="gone" android:layout_width="75.0dip" android:layout_height="50.0dip" android:layout_marginLeft="20.0dip" android:text="跳过" app:shape_radius="15.0dip" app:shape_solidColor="#fff3f3f3" />
+    <com.sheguo.tggy.view.widget.NextButton android:textSize="17.0sp" android:textStyle="bold" android:textColor="@color/color_FFFFFF" android:gravity="center" android:id="@id/next_button" android:background="@drawable/button_ff8800" android:layout_width="0.0dip" android:layout_height="50.0dip" android:layout_marginLeft="30.0dip" android:text="下一步" android:layout_weight="1.0" />
+</LinearLayout>

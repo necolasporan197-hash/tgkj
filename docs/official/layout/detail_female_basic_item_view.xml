@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjq.shape.layout.ShapeLinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="26.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="15.0dip" app:shape_radius="8.0dip" app:shape_solidColor="#fff3f3f3"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/homepage_location" />
+    <TextView android:textSize="12.0sp" android:textColor="#ff61605f" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="10.0dip" android:text="长沙" app:shape_radius="10.0dip" app:shape_solidColor="#ff61605f" />
+</com.hjq.shape.layout.ShapeLinearLayout>

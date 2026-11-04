@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/app_next_color" android:gravity="center" android:id="@id/text_view" android:background="@drawable/button_ff8800" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="下一步" />
+</FrameLayout>

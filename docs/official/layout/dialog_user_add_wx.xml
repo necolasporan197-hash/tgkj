@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_cover" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/pop_invite_home1" android:adjustViewBounds="true" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.hjq.shape.view.ShapeTextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="@color/exo_white" android:gravity="center" android:id="@id/btn_add" android:layout_width="229.0dip" android:layout_height="48.0dip" android:layout_marginBottom="30.0dip" android:text="立即添加" app:layout_constraintBottom_toBottomOf="@id/iv_cover" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:shape_radius="15.0dip" app:shape_solidColor="#ffff731c" />
+    <ImageView android:id="@id/iv_close" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:src="@drawable/pop_cha" app:layout_constraintRight_toRightOf="@id/iv_cover" app:layout_constraintTop_toTopOf="@id/iv_cover" />
+</androidx.constraintlayout.widget.ConstraintLayout>

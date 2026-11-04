@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.soulwolf.widget.ratiolayout.widget.RatioFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:heightRatio="114.0" app:widthRatio="114.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.round.RoundImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" app:leftBottomRadius="5.0dip" app:leftTopRadius="5.0dip" app:rightBottomRadius="5.0dip" app:rightTopRadius="5.0dip" />
+    <ImageView android:id="@id/benren" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/homepage_brbq" />
+    <ImageView android:layout_gravity="bottom" android:id="@id/passtext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitXY" />
+</net.soulwolf.widget.ratiolayout.widget.RatioFrameLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:id="@id/account_create_tag" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="21.0sp" android:textStyle="bold" android:textColor="#ff30302f" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="你的微信号" />
+        <ImageView android:layout_gravity="center" android:id="@id/tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:src="@drawable/ic_register_tag_wx_n" />
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textColor="#ffb9b9b9" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="请正确填写可以增加收益 ，填写错误的微信将无法通过审核 ~" />
+    <com.sheguo.tggy.activity.ui.wiget.ItemInputView android:id="@id/item_input_view" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="21.0dip" />
+    <LinearLayout android:id="@id/ll_warn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="24.0dip">
+        <ImageView android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_marginTop="3.0dip" android:src="@drawable/ic_register_xh_n" />
+        <TextView android:textSize="13.0sp" android:textColor="#ffff6b6b" android:id="@id/content_warn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="昵称设置后需要人工审核后才能显示" />
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="74.0dip" android:layout_marginRight="30.0dip" layout="@layout/create_info_bottom" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:id="@id/scrollView" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="19.0sp" android:textStyle="bold" android:textColor="#ff181716" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="15.0dip" android:text="您为什么要打算离开糖果空间呢？" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" />
+        <EditText android:textSize="14.0sp" android:textColor="#ff30302f" android:gravity="top" android:id="@id/et_reason" android:background="@drawable/shape_bg_corner_fbe4d9" android:paddingLeft="10.0dip" android:paddingTop="12.0dip" android:paddingRight="12.0dip" android:paddingBottom="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:hint="请填写详细原因以帮助我们做的更好（至少5个字）" android:backgroundTint="#fff9f9f9" />
+        <com.hjq.shape.view.ShapeTextView android:textSize="17.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_next" android:layout_width="315.0dip" android:layout_height="50.0dip" android:layout_marginTop="36.0dip" android:layout_marginBottom="20.0dip" android:text="下一步" app:shape_radius="15.0dip" app:shape_solidColor="#ffffcdb6" app:shape_solidSelectedColor="#ffff731c" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

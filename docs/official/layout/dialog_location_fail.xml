@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:id="@id/carview" android:layout_width="330.0dip" android:layout_height="wrap_content" app:cardCornerRadius="15.0dip" app:cardElevation="0.0dip">
+        <RelativeLayout android:orientation="vertical" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/icon" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/pop_tp_top" />
+            <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="#ff181716" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" android:text="定位失败" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff30302f" android:gravity="center" android:id="@id/message_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="84.0dip" android:layout_marginRight="30.0dip" android:text="城市定位失败，可点击下方按钮尝试重新定位，或手动进行城市选择" android:lineSpacingExtra="2.0dip" />
+            <com.hjq.shape.view.ShapeTextView android:textSize="16.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/tv_selected_city" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="32.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="32.0dip" android:text="手动选择城市" android:layout_below="@id/message_text_view" app:shape_radius="15.0dip" app:shape_strokeColor="#ffdddddd" app:shape_strokeWidth="1.0dip" />
+            <LinearLayout android:orientation="vertical" android:paddingLeft="32.0dip" android:paddingRight="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_marginBottom="30.0dip" android:layout_below="@id/tv_selected_city">
+                <com.sheguo.tggy.view.widget.NextButton android:id="@id/refresh_location" android:layout_width="fill_parent" android:layout_height="48.0dip" app:nextBg="@drawable/button_ff8800" app:text="重新定位" />
+                <TextView android:textSize="14.0sp" android:textColor="#ff828282" android:layout_gravity="center_horizontal" android:id="@id/tv_feedback" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="反馈问题" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <ImageView android:layout_gravity="center|right|top" android:id="@id/close_dialog" android:paddingLeft="25.0dip" android:paddingTop="15.0dip" android:paddingRight="15.0dip" android:paddingBottom="25.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pop_lose_n" />
+</FrameLayout>

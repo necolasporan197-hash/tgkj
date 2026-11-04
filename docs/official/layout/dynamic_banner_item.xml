@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="fill_parent" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.round.RoundImageView android:id="@id/imageview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" android:scaleType="centerCrop" app:leftBottomRadius="10.0dip" app:leftTopRadius="10.0dip" app:rightBottomRadius="10.0dip" app:rightTopRadius="10.0dip" />
+</androidx.cardview.widget.CardView>

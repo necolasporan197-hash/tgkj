@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root_view" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_title" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="#ffff5001" android:gravity="center" android:id="@id/cancel_view" android:layout_width="90.0dip" android:layout_height="fill_parent" android:text="取消" />
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/app_title_color" android:gravity="center" android:id="@id/title_text_view" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <TextView android:textSize="16.0sp" android:textColor="#ffff5001" android:gravity="center" android:id="@id/ok_view" android:layout_width="90.0dip" android:layout_height="fill_parent" android:text="确定" />
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="0.5dip" layout="@layout/divider_layout" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/list_linear_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+    <TextView android:textSize="16.0sp" android:textColor="#ffff5001" android:gravity="center" android:id="@id/bottom_cancel_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="44.0dip" android:text="@string/cancel" />
+</LinearLayout>

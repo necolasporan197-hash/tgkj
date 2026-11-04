@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.hjq.shape.view.ShapeTextView android:textSize="14.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/item_price" android:layout_width="85.0dip" android:layout_height="44.0dip" android:layout_marginBottom="27.0dip" app:shape_radius="10.0dip" app:shape_solidColor="#fff6f6f6" app:shape_solidSelectedColor="#fffff3ed" app:shape_strokeColor="@color/transparent" app:shape_strokeSelectedColor="#ffff731c" app:shape_strokeWidth="1.0dip" />
+</FrameLayout>

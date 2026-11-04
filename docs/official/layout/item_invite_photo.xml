@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="0.0dip" app:cardCornerRadius="3.0dip" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.business.widget.RadiusImageView android:id="@id/item_photo1" android:layout_width="248.0dip" android:layout_height="186.0dip" android:scaleType="centerCrop" app:riv_corner_radius="8.0dip" />
+    <com.hjq.shape.view.ShapeTextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="right" android:id="@id/tv_status" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="wrap_content" android:layout_height="20.0dip" android:text="审核中" app:shape_bottomLeftRadius="8.0dip" app:shape_bottomRightRadius="1.0dip" app:shape_solidColor="#99000000" app:shape_topLeftRadius="1.0dip" app:shape_topRightRadius="8.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:id="@id/ll_hot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginBottom="6.0dip">
+        <com.sheguo.tggy.view.widget.PileLayout android:id="@id/pile_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleX="0.9" android:scaleY="0.9">
+            <ImageView android:id="@id/iv_hot_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_hot_tag1" />
+            <TextView android:textSize="11.0sp" android:textColor="#ffffffff" android:layout_gravity="center_vertical" android:id="@id/tv_hot_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="热度·1" />
+        </FrameLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

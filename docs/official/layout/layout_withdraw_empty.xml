@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_empty" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="125.0dip" android:src="@drawable/ic_kby_zwsj_other" />
+    <TextView android:textSize="18.0sp" android:textColor="#ff30302f" android:id="@id/tv_withdraw_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="10小时内又有1423人提现了140元" />
+    <TextView android:textSize="14.0sp" android:textColor="#ff9c9b9b" android:id="@id/content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="快去邀请提现" />
+    <com.sheguo.tggy.view.widget.NextButton android:id="@id/next_button" android:layout_width="fill_parent" android:layout_height="46.0dip" android:layout_marginLeft="55.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="55.0dip" app:nextSize="18.0sp" app:text="去邀请" />
+</LinearLayout>

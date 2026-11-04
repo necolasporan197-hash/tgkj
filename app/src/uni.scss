@@ -1,0 +1,30 @@
+/**
+ * 全局 SCSS 变量 —— 与 src/design/tokens.js 保持同源（均抽取自官方 APK）。
+ * uni-app 会自动把本文件注入到每个 <style lang="scss"> 中，无需 import。
+ */
+/* 主色取官方按钮/指示条/红点统一样式 drawable 的颜色：button_ff8800.xml、main_tab_dot.xml 均为 #ff731c */
+$tg-primary: #ff731c;
+$tg-primary-dark: #ff5100;
+$tg-primary-deep: #a32902;
+$tg-accent: #ff5e13;
+
+$tg-sky: #00baf2;
+$tg-blue: #0080ff;
+$tg-gold: #e7b268;
+
+$tg-text-primary: #171d24;
+$tg-text-regular: #494949;
+$tg-text-secondary: #787e85;
+$tg-text-tertiary: #91979e;
+$tg-text-placeholder: #c8c9cc;
+$tg-text-inverse: #ffffff;
+
+$tg-bg: #ffffff;
+$tg-bg-gray: #f0f1f2;
+$tg-bg-page: #f5f6f8;
+$tg-title-bar: #ffffff;
+$tg-divider: #e5e5e5;
+$tg-border: #edf0f2;
+
+$tg-approved: #4cd672;
+$tg-rejected: #f26666;

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.soulwolf.widget.ratiolayout.widget.RatioFrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:heightRatio="100.0" app:widthRatio="100.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.business.widget.RadiusImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" app:riv_corner_radius="5.0dip" />
+    <ImageView android:layout_gravity="center" android:id="@id/iv_play" android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@drawable/video_click_play_selector" />
+    <ImageView android:layout_gravity="bottom|center|left" android:id="@id/burn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginBottom="3.0dip" android:src="@drawable/pic_xzzp_yhjf2" />
+    <FrameLayout android:layout_gravity="center|right|top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginRight="3.0dip">
+        <ImageView android:id="@id/selectImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pic_xzzp_wxz" />
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/shuzi" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</net.soulwolf.widget.ratiolayout.widget.RatioFrameLayout>

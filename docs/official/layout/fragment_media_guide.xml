@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:background="#fffbf5ee" android:layout_width="fill_parent" android:layout_height="30.0dip">
+        <TextView android:textSize="12.0sp" android:textColor="#ffca9e76" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="*上传更多自己的视频、照片可以更受欢迎哦~" />
+    </LinearLayout>
+    <com.hjq.shape.layout.ShapeLinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="318.0dip" android:layout_height="210.0dip" android:layout_marginTop="24.0dip" app:shape_dashGap="2.0dip" app:shape_dashWidth="4.0dip" app:shape_radius="15.0dip" app:shape_strokeColor="#ffede7e3" app:shape_strokeWidth="1.5dip">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_add_pic" />
+        <com.hjq.shape.layout.ShapeLinearLayout android:gravity="center" android:id="@id/skip_pic" android:layout_width="130.0dip" android:layout_height="43.0dip" android:layout_marginTop="15.0dip" app:shape_radius="8.0dip" app:shape_solidColor="#ffff731c">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_add" />
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="上传照片" />
+        </com.hjq.shape.layout.ShapeLinearLayout>
+    </com.hjq.shape.layout.ShapeLinearLayout>
+    <com.hjq.shape.layout.ShapeLinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="318.0dip" android:layout_height="210.0dip" android:layout_marginTop="36.0dip" app:shape_dashGap="2.0dip" app:shape_dashWidth="4.0dip" app:shape_radius="15.0dip" app:shape_strokeColor="#ffede7e3" app:shape_strokeWidth="1.5dip">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pic_add_voice" />
+        <com.hjq.shape.layout.ShapeLinearLayout android:gravity="center" android:id="@id/skip_video" android:layout_width="130.0dip" android:layout_height="43.0dip" android:layout_marginTop="15.0dip" app:shape_radius="8.0dip" app:shape_solidColor="#ffff731c">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_add" />
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="上传视频" />
+        </com.hjq.shape.layout.ShapeLinearLayout>
+    </com.hjq.shape.layout.ShapeLinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/new_user_share_two" android:visibility="invisible" layout="@layout/share_new_user_dialog" />
+        <include android:visibility="visible" layout="@layout/share_user_dialog" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:background="#fff8f8f8" android:layout_width="fill_parent" android:layout_height="138.0dip">
+        <com.sheguo.tggy.business.user.share.ShareItemView android:id="@id/wechat_share_item_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:icon="@drawable/share_wechat" app:text="微信好友" />
+        <com.sheguo.tggy.business.user.share.ShareItemView android:id="@id/wechat_moments_share_item_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:icon="@drawable/share_wechat_moments" app:text="微信朋友圈" />
+        <com.sheguo.tggy.business.user.share.ShareItemView android:id="@id/qq_share_item_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:icon="@drawable/share_qq" app:text="QQ" />
+    </LinearLayout>
+</LinearLayout>

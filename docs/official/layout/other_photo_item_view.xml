@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardCornerRadius="10.0dip" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="230.0dip" android:scaleType="centerCrop" />
+    <FrameLayout android:layout_gravity="center" android:id="@id/operation" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/photo_destoy" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="29.0dip" android:layout_height="34.0dip" android:src="@drawable/ic_profile_fh_n" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/color_FFFFFF" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_destory" />
+        </LinearLayout>
+        <RelativeLayout android:orientation="vertical" android:id="@id/blurn" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="14.0sp" android:textColor="@color/color_FFFFFF" android:gravity="center" android:background="@drawable/pic_profile_yhjf_n" android:layout_width="fill_parent" android:layout_height="27.0dip" android:text="阅后即焚" android:layout_alignParentBottom="true" />
+            <ImageView android:layout_width="34.0dip" android:layout_height="38.0dip" android:src="@drawable/ic_profile_yhjf_n" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/playview" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="54.0dip" android:layout_height="54.0dip" android:src="@drawable/ic_play_start_other" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </FrameLayout>
+    <ImageView android:id="@id/benren" android:background="@drawable/homepage_brbq" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</androidx.cardview.widget.CardView>

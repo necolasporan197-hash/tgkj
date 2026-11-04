@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="44.0dip" app:centerText="注销账号" />
+    <ScrollView android:paddingBottom="80.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title_bar">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="#ff61605f" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="请知悉并谨记：账号注销后，将无法再使用该手机号找回此账号的用户数据（即使你仍使用该手机号重新注册并使用糖果空间），请仔细阅读下述条款后审慎操作：" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                <TextView android:textSize="11.0sp" android:textColor="#ff61605f" android:gravity="center" android:background="@drawable/item_cancellaction_bg" android:layout_width="15.0dip" android:layout_height="15.0dip" android:text="1" />
+                <TextView android:textSize="15.0sp" android:textColor="#ff30302f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="账号注销后将无法恢复；" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                <TextView android:textSize="11.0sp" android:textColor="#ff61605f" android:gravity="center" android:background="@drawable/item_cancellaction_bg" android:layout_width="15.0dip" android:layout_height="15.0dip" android:text="2" />
+                <TextView android:textSize="15.0sp" android:textColor="#ff30302f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="注销后若再次使用相同手机号注册登录糖果空间APP将是全新账号；" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                <TextView android:textSize="11.0sp" android:textColor="#ff61605f" android:gravity="center" android:background="@drawable/item_cancellaction_bg" android:layout_width="15.0dip" android:layout_height="15.0dip" android:text="3" />
+                <TextView android:textSize="15.0sp" android:textColor="#ff30302f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="注销后，你的全部个人资料和使用记录（包括不限于登记微信号、昵称、头像、消息记录、发布动态内容、相册照片、视频、语音等）均会自糖果空间平台清除，无法找回；" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                <TextView android:textSize="11.0sp" android:textColor="#ff61605f" android:gravity="center" android:background="@drawable/item_cancellaction_bg" android:layout_width="15.0dip" android:layout_height="15.0dip" android:text="4" />
+                <TextView android:textSize="15.0sp" android:textColor="#ff30302f" android:id="@id/tag1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="注销后，钱包余额等全部资产将会被清空，同一手机号再次注册无法承继该资产；" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                <TextView android:textSize="11.0sp" android:textColor="#ff61605f" android:gravity="center" android:background="@drawable/item_cancellaction_bg" android:layout_width="15.0dip" android:layout_height="15.0dip" android:text="5" />
+                <TextView android:textSize="15.0sp" android:textColor="#ff30302f" android:id="@id/tag2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="注销后，存续期内的会员身份将直接失效，同一手机号再次注册无法承继该权益；" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_female_off" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                <TextView android:textSize="11.0sp" android:textColor="#ff61605f" android:gravity="center" android:background="@drawable/item_cancellaction_bg" android:layout_width="15.0dip" android:layout_height="15.0dip" android:text="6" />
+                <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="#ffff5e5e" android:id="@id/tag3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="账号一旦注销，同一手机号在 90 日内无法再次进行注册。" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                <TextView android:textSize="11.0sp" android:textColor="#ff61605f" android:gravity="center" android:id="@id/tv_last" android:background="@drawable/item_cancellaction_bg" android:layout_width="15.0dip" android:layout_height="15.0dip" android:text="7" />
+                <TextView android:textSize="15.0sp" android:textColor="#ff30302f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="账号一旦注销，将无法恢复，请谨慎操作。你在进行注销操作时，即代表同意本注销协议。" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:background="@color/exo_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="36.0dip" android:layout_alignParentBottom="true">
+        <TextView android:textSize="15.0sp" android:textColor="#ff828282" android:gravity="center" android:layout_gravity="bottom" android:id="@id/submit" android:background="@drawable/login_register_view_white" android:layout_width="0.0dip" android:layout_height="48.0dip" android:layout_marginLeft="21.0dip" android:text="申请注销" android:layout_weight="1.0" />
+        <TextView android:textSize="15.0sp" android:textColor="@color/color_FFFFFF" android:gravity="center" android:layout_gravity="center" android:id="@id/back" android:background="@drawable/shape_btn_bg_think" android:layout_width="0.0dip" android:layout_height="48.0dip" android:layout_marginLeft="33.0dip" android:layout_marginRight="21.0dip" android:text="再考虑一下" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

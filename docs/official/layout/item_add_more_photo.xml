@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip">
+        <cn.jpush.android.ui.RoundedImageView android:id="@id/tag1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/pic_sc_kuang" android:scaleType="fitXY" app:leftBottomRadius="10.0dip" app:leftTopRadius="10.0dip" app:rightBottomRadius="10.0dip" app:rightTopRadius="10.0dip" />
+        <ImageView android:layout_gravity="center|right|top" android:id="@id/tag_close1" android:visibility="invisible" android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="3.0dip" android:src="@drawable/new_close" />
+        <ImageView android:layout_gravity="bottom|center|left" android:id="@id/tag_yhjf1" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pic_register_yhjf" />
+    </FrameLayout>
+</LinearLayout>

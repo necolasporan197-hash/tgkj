@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:orientation="vertical" android:background="@color/color_FFFFFF" android:layout_width="375.0dip" android:layout_height="wrap_content" android:layout_marginLeft="23.0dip" android:layout_marginRight="23.0dip" app:cardCornerRadius="15.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:background="@drawable/pop_tp_top" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="#ff181716" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" android:text="温馨提示" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff61605f" android:gravity="center_horizontal" android:layout_gravity="bottom|center" android:layout_width="263.0dip" android:layout_height="wrap_content" android:layout_marginTop="84.0dip" android:text="为营造良好社交环境，请勿添加他人在聊天对话中发送的外部联系方式，以免造成隐私泄露、财物受损！" />
+        </FrameLayout>
+        <com.sheguo.tggy.view.widget.NextButton android:id="@id/next_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="32.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="32.0dip" android:layout_marginBottom="39.0dip" app:nextBg="@drawable/warn_dialog_button" app:nextColor="@color/color_FFFFFF" app:text="我已知晓" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

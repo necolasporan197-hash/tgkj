@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/container_backgroud" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="200.0dip">
+        <com.luozm.captcha.PictureVertifyView android:id="@id/vertifyView" android:layout_width="fill_parent" android:layout_height="200.0dip" android:scaleType="fitXY" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/accessRight" android:background="#7f000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="28.0dip">
+            <ImageView android:layout_gravity="center" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/right" />
+            <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:layout_gravity="center" android:id="@id/accessText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="验证通过,耗时1000毫秒" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/accessFailed" android:background="#7f000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="28.0dip">
+            <ImageView android:layout_gravity="center" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/wrong" />
+            <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:layout_gravity="center" android:id="@id/accessFailedText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="center|right|top" android:id="@id/refresh" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_margin="5.0dip" android:src="@drawable/refresh" />
+    </FrameLayout>
+    <com.luozm.captcha.TextSeekbar android:layout_gravity="center" android:id="@id/seekbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:thumbOffset="0.0dip" android:splitTrack="false" style="@style/MySeekbarSytle" />
+</LinearLayout>

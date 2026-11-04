@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rootView" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_top_tips" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_below="@id/iv_logo_text">
+        <ImageView android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/app_icon" />
+        <FrameLayout android:background="@drawable/zc_regiest_top" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_marginLeft="11.0dip">
+            <TextView android:textSize="13.0sp" android:textColor="#ff30302f" android:layout_gravity="center" android:paddingLeft="5.0dip" android:paddingRight="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="清晰的头像更受关注" />
+        </FrameLayout>
+    </LinearLayout>
+    <FrameLayout android:layout_gravity="center" android:id="@id/llUpload" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip">
+        <com.sheguo.tggy.view.widget.round.RoundImageView android:layout_gravity="center" android:id="@id/photo" android:layout_width="126.0dip" android:layout_height="168.0dip" android:src="@drawable/pic_register_upload1_n" app:leftBottomRadius="5.0dip" app:leftTopRadius="5.0dip" app:rightBottomRadius="5.0dip" app:rightTopRadius="5.0dip" />
+        <ImageView android:layout_gravity="center|right|top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_register_tag_n" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/llTags" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.sheguo.tggy.view.widget.round.RoundImageView android:id="@id/tag1" android:layout_width="101.0dip" android:layout_height="101.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/pic_sc_upload_default" app:leftBottomRadius="10.0dip" app:leftTopRadius="10.0dip" app:rightBottomRadius="10.0dip" app:rightTopRadius="10.0dip" />
+            <ImageView android:layout_gravity="center|right|top" android:id="@id/tag_close1" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/new_close" />
+            <ImageView android:layout_gravity="bottom|center|left" android:id="@id/tag_yhjf1" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pic_register_yhjf" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.sheguo.tggy.view.widget.round.RoundImageView android:id="@id/tag2" android:layout_width="101.0dip" android:layout_height="101.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/pic_sc_upload_default" app:leftBottomRadius="10.0dip" app:leftTopRadius="10.0dip" app:rightBottomRadius="10.0dip" app:rightTopRadius="10.0dip" />
+            <ImageView android:layout_gravity="center|right|top" android:id="@id/tag_close2" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/new_close" />
+            <ImageView android:layout_gravity="bottom|center|left" android:id="@id/tag_yhjf2" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pic_register_yhjf" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.sheguo.tggy.view.widget.round.RoundImageView android:id="@id/tag3" android:layout_width="101.0dip" android:layout_height="101.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/pic_sc_upload_default" app:leftBottomRadius="10.0dip" app:leftTopRadius="10.0dip" app:rightBottomRadius="10.0dip" app:rightTopRadius="10.0dip" />
+            <ImageView android:layout_gravity="center|right|top" android:id="@id/tag_close3" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/new_close" />
+            <ImageView android:layout_gravity="bottom|center|left" android:id="@id/tag_yhjf3" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pic_register_yhjf" />
+        </FrameLayout>
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff30302f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="重要提示" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <ImageView android:id="@id/image_star" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:src="@drawable/ic_register_xh_n" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_toLeftOf="@id/image_star">
+            <TextView android:textSize="13.0sp" android:textColor="#ff828282" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="上传非本人或换脸、过度P图的照片将被平台拒绝，请谨慎上传！" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff30302f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="21.0dip" android:layout_marginBottom="10.0dip" android:text="头像示例" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/pic_sy_1" android:adjustViewBounds="true" android:layout_weight="1.0" />
+        <ImageView android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/pic_sy_2" android:adjustViewBounds="true" android:layout_weight="1.0" />
+        <ImageView android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/pic_sy_3" android:adjustViewBounds="true" android:layout_weight="1.0" />
+        <ImageView android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/pic_sy_4" android:adjustViewBounds="true" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:layout_width="1.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <include android:id="@id/llBottom" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="50.0dip" android:layout_marginBottom="46.0dip" layout="@layout/create_info_bottom" />
+</LinearLayout>

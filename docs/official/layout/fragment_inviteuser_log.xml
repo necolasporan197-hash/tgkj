@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/color_FFFFFF" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+        <com.sheguo.tggy.activity.ui.wiget.SgRefreshLayout android:id="@id/refresh_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.sheguo.tggy.activity.ui.wiget.SgRefreshLayout>
+    </LinearLayout>
+    <include android:visibility="gone" layout="@layout/layout_withdraw_empty" />
+</FrameLayout>

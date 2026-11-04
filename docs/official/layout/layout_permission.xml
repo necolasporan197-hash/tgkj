@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:background="@color/color_FFFFFF" android:layout_width="fill_parent" android:layout_height="fill_parent" app:cardCornerRadius="15.0dip" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:background="@color/color_FFFFFF" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/top" android:layout_width="fill_parent" android:layout_height="121.0dip">
+            <ImageView android:id="@id/icon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/pic_pop_qxsq" android:scaleType="fitXY" />
+            <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff181716" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:text="用户协议与隐私保护" />
+        </FrameLayout>
+        <ScrollView android:id="@id/scroll" android:background="@drawable/ysxy_kuang" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="180.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="-40.0dip" android:layout_marginRight="15.0dip" android:layout_below="@id/top">
+            <LinearLayout android:orientation="vertical" android:paddingLeft="15.0dip" android:paddingTop="10.0dip" android:paddingRight="15.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="14.0sp" android:textColor="#ff61605f" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" />
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:orientation="horizontal" android:id="@id/operation" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_marginTop="23.0dip" android:layout_marginRight="40.0dip" android:layout_marginBottom="39.0dip" android:layout_below="@id/scroll">
+            <com.sheguo.tggy.view.widget.NextButton android:gravity="center" android:id="@id/close" android:layout_width="0.0dip" android:layout_height="40.0dip" android:layout_weight="1.0" android:layout_marginEnd="30.0dip" app:nextBg="@drawable/login_register_view_white" app:nextColor="@color/color_9E9E9E" app:nextSize="14.0sp" app:text="拒绝" />
+            <com.sheguo.tggy.view.widget.NextButton android:id="@id/next_button" android:layout_width="0.0dip" android:layout_height="40.0dip" android:layout_marginLeft="30.0dip" android:layout_weight="1.0" app:nextBg="@drawable/button_ff8800" app:nextSize="14.0sp" app:text="同意" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

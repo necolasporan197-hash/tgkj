@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sheguo.tggy.activity.ui.wiget.ItemInputView android:id="@id/itemInput" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:id="@id/intemTips" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="12.0dip">
+        <ImageView android:id="@id/iv_rating" android:visibility="gone" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_marginTop="3.0dip" android:src="@drawable/ic_register_xh_n" />
+        <TextView android:textSize="13.0sp" android:textColor="#ffff6b6b" android:id="@id/content" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="包含违规内容，请重新填写" />
+    </LinearLayout>
+</LinearLayout>

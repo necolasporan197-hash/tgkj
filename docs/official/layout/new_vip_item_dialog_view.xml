@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="98.0dip" android:layout_height="150.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/content" android:background="@drawable/vip_item_select_dialog" android:layout_width="98.0dip" android:layout_height="140.0dip" android:layout_marginTop="9.0dip">
+        <TextView android:textSize="14.0sp" android:textColor="#ffe47315" android:id="@id/newDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:text="15天" />
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/color_30302F" android:id="@id/newPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:text="198元" />
+        <FrameLayout android:id="@id/price_strike_container" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+            <TextView android:textSize="11.0sp" android:textColor="#ffa08b6b" android:layout_gravity="center" android:id="@id/newPricem" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="198元/月" />
+            <View android:layout_gravity="center" android:id="@id/divider" android:background="#ffa59191" android:visibility="gone" android:layout_width="30.0dip" android:layout_height="1.0dip" />
+        </FrameLayout>
+    </LinearLayout>
+    <com.hjq.shape.view.ShapeTextView android:textSize="11.0sp" android:textColor="@color/color_FFFFFF" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tag_text_view" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="20.0dip" android:minWidth="70.0dip" app:shape_endColor="#ffffa200" app:shape_radius="4.0dip" app:shape_startColor="#ffff842f" />
+</FrameLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:orientation="vertical" android:layout_width="163.0dip" android:layout_height="244.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" app:cardCornerRadius="10.0dip" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/viewpageItem" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <net.soulwolf.widget.ratiolayout.widget.RatioImageView android:id="@id/img" android:layout_width="fill_parent" android:layout_height="fill_parent" app:heightRatio="309.0" app:widthRatio="206.0" />
+        <ImageView android:layout_gravity="bottom|center|right" android:id="@id/erweima" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="9.0dip" android:layout_marginBottom="13.0dip" />
+        <RelativeLayout android:layout_gravity="bottom|center|left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginBottom="24.0dip">
+            <com.sheguo.tggy.view.widget.round.CircleImageView android:id="@id/touxiang" android:layout_width="23.0dip" android:layout_height="23.0dip" app:border_color="@color/color_FFFFFF" app:round_borderWidth="1.0dip" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginTop="3.0dip" android:layout_toRightOf="@id/touxiang" android:layout_alignTop="@id/touxiang">
+                <TextView android:textSize="7.0sp" android:textColor="#ffffffff" android:id="@id/nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="7" android:shadowColor="#ebae4100" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="3.0" />
+                <ImageView android:layout_gravity="center" android:id="@id/sex" android:layout_width="5.0dip" android:layout_height="8.0dip" android:layout_marginLeft="3.0dip" android:layout_marginTop="1.0dip" />
+            </LinearLayout>
+            <TextView android:textSize="5.0sp" android:textColor="#ffffffff" android:id="@id/tags" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:shadowColor="#ebae4100" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="3.0" android:layout_toRightOf="@id/touxiang" android:layout_below="@id/ll_tag" android:layout_alignBaseline="@id/touxiang" />
+        </RelativeLayout>
+    </FrameLayout>
+    <ImageView android:layout_gravity="center|right|top" android:id="@id/selectedImage" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="6.0dip" android:src="@drawable/ic_xz" />
+</androidx.cardview.widget.CardView>

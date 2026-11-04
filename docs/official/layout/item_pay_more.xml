@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="30.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="12.0sp" android:textColor="#ffc2c2c2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="更多支付方式" android:drawableRight="@drawable/new_ic_pop_arrow" android:drawablePadding="3.0dip" />
+</LinearLayout>

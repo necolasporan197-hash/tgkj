@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.round.RoundImageView android:id="@id/image_view_1" android:visibility="gone" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_marginRight="6.0dip" app:leftBottomRadius="6.0dip" app:leftTopRadius="6.0dip" app:rightBottomRadius="6.0dip" app:rightTopRadius="6.0dip" />
+    <com.sheguo.tggy.view.widget.round.RoundImageView android:id="@id/image_view_2" android:visibility="gone" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_marginRight="6.0dip" app:leftBottomRadius="6.0dip" app:leftTopRadius="6.0dip" app:rightBottomRadius="6.0dip" app:rightTopRadius="6.0dip" />
+    <com.sheguo.tggy.view.widget.round.RoundImageView android:id="@id/image_view_3" android:visibility="gone" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_marginRight="6.0dip" app:leftBottomRadius="6.0dip" app:leftTopRadius="6.0dip" app:rightBottomRadius="6.0dip" app:rightTopRadius="6.0dip" />
+    <com.sheguo.tggy.view.widget.round.RoundImageView android:id="@id/add_view" android:background="@drawable/pic_me_upload_n" android:layout_width="100.0dip" android:layout_height="100.0dip" android:scaleType="centerInside" app:leftBottomRadius="6.0dip" app:leftTopRadius="6.0dip" app:rightBottomRadius="6.0dip" app:rightTopRadius="6.0dip" />
+</merge>

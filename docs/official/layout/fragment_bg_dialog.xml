@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="100.0dip">
+        <ImageView android:id="@id/second_next" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/zr_guide" />
+        <com.sheguo.tggy.view.widget.NextButton android:layout_gravity="bottom|center" android:visibility="gone" android:layout_width="266.0dip" android:layout_height="48.0dip" android:layout_marginTop="26.0dip" android:layout_marginBottom="39.0dip" app:nextBg="@drawable/button_ff8800" app:nextSize="16.0sp" app:text="我知道了" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:id="@id/scrollView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:background="#fff7f7f7" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:id="@id/basic_top" android:layout_width="fill_parent" android:layout_height="450.0dip" layout="@layout/detail_female_basic_top" />
+            <include android:id="@id/top_info" android:layout_width="fill_parent" android:layout_height="450.0dip" layout="@layout/female_common_info" />
+            <include android:id="@id/personal_basic_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="370.0dip" layout="@layout/female_detail_info" />
+            <LinearLayout android:orientation="vertical" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:id="@id/content" android:background="@color/exo_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="450.0dip">
+                    <include android:id="@id/photo_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" layout="@layout/detail_photo_view" />
+                    <include android:id="@id/iv_audio_view" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" layout="@layout/detail_audio" />
+                    <include android:id="@id/personal_info" android:paddingLeft="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" layout="@layout/detail_tags" />
+                    <View android:background="#fff7f7f7" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:background="@color/exo_white" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <include layout="@layout/detail_bottom" />
+                </LinearLayout>
+                <include layout="@layout/detail_tip" />
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="right" android:id="@id/reportText" android:background="@drawable/bg_detail_report" android:paddingLeft="9.0dip" android:paddingTop="7.0dip" android:paddingRight="9.0dip" android:paddingBottom="7.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="100.0dip">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/tips_icon" android:layout_width="12.0dip" android:layout_height="14.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/ic_female_detail_lock" />
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="解锁后30天内可无限查看" />
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+    <include android:id="@id/title_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/detail_title_bar" />
+    <include android:id="@id/title_bar_1" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/detail_title_bar" />
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/detail_bottom" android:background="@drawable/bg_profile_ditu_n" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.hjq.shape.layout.ShapeLinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/look_wechat" android:layout_width="64.0dip" android:layout_height="45.0dip" android:layout_marginLeft="30.0dip" android:layout_marginBottom="7.0dip" app:shape_radius="24.0dip" app:shape_solidColor="#fff3f3f3">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/hagepage_wechat" />
+        </com.hjq.shape.layout.ShapeLinearLayout>
+        <com.hjq.shape.layout.ShapeLinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_chat" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginLeft="45.0dip" android:layout_marginRight="33.0dip" android:layout_weight="1.0" app:shape_radius="18.0dip" app:shape_solidColor="#ffff731c">
+            <ImageView android:layout_width="26.0dip" android:layout_height="26.0dip" android:src="@drawable/ic_profile_chat_n" />
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="私聊Ta" />
+        </com.hjq.shape.layout.ShapeLinearLayout>
+    </LinearLayout>
+</FrameLayout>

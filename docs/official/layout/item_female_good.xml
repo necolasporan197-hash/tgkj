@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="96.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:id="@id/rl_content" android:background="@drawable/item_female_bg" android:layout_width="fill_parent" android:layout_height="86.0dip">
+        <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="#ff30302f" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="15元/40次" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffb9b9b9" android:gravity="center_horizontal" android:id="@id/subTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="0.45元/次" android:layout_below="@id/title" android:layout_alignLeft="@id/title" android:layout_alignRight="@id/title" />
+        <TextView android:textSize="15.0sp" android:textColor="#ff61605f" android:gravity="center" android:id="@id/desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="私聊男性20人" android:layout_alignTop="@id/title" android:layout_alignBottom="@id/subTitle" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <FrameLayout android:layout_gravity="center|right|top" android:id="@id/bq" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-20.0dip">
+        <ImageView android:layout_gravity="center|right|top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bq" />
+        <TextView android:textSize="11.0sp" android:textColor="@color/color_FFFFFF" android:gravity="center" android:layout_gravity="center" android:id="@id/biaozhu" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</FrameLayout>

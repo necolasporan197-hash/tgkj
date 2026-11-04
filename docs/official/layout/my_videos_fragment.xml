@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:centerText="我的视频" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="12.0dip">
+        <ImageView android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_marginTop="3.0dip" android:src="@drawable/ic_register_xh_n" />
+        <TextView android:textSize="13.0sp" android:textColor="#ffb9b9b9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="点击上传新视频，长度为3-15秒。涉及违规、敏感内容将被删除哦~" />
+    </LinearLayout>
+    <com.sheguo.tggy.view.widget.ThemedSwipeRefreshLayout android:id="@id/swipe_refresh_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/main_margin">
+        <com.sheguo.tggy.view.widget.StateLayout android:id="@id/state_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.sheguo.tggy.view.widget.StateLayout>
+    </com.sheguo.tggy.view.widget.ThemedSwipeRefreshLayout>
+</LinearLayout>

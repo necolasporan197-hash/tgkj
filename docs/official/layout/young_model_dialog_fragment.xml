@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:id="@id/carview" android:layout_width="330.0dip" android:layout_height="wrap_content" app:cardCornerRadius="15.0dip" app:cardElevation="0.0dip">
+        <LinearLayout android:orientation="vertical" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/icon" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/pic_pop_young" />
+            <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff30302f" android:gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="青少年模式" />
+            <LinearLayout android:orientation="vertical" android:paddingLeft="23.0dip" android:paddingRight="23.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                <TextView android:textSize="14.0sp" android:textColor="#ff787776" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="在青少年模式中，无法进行充值、购买等操作，无法使用发布内容等功能" />
+                <com.hjq.shape.view.ShapeTextView android:textStyle="bold" android:gravity="center" android:id="@id/tv_open" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="24.0dip" android:layout_marginBottom="40.0dip" android:text="开启青少年模式" app:shape_radius="15.0dip" app:shape_solidColor="#fff9f9f9" app:shape_strokeColor="#ffdddddd" app:shape_strokeWidth="1.0dip" app:shape_textColor="#ff61605f" />
+                <com.sheguo.tggy.view.widget.NextButton android:id="@id/close" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="24.0dip" android:layout_marginBottom="40.0dip" app:nextBg="@drawable/button_ff8800" app:nextSize="16.0sp" app:text="关闭青少年模式" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <ImageView android:layout_gravity="center|right|top" android:id="@id/close_dialog" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pop_lose_n" />
+</FrameLayout>

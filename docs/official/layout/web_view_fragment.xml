@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sheguo.tggy.view.widget.SimpleWebView android:id="@id/simple_web_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:layout_gravity="center|left|top" android:id="@id/back" android:background="@color/transparent" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="15.0dip" />
+</FrameLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/liveness_root_layout" android:background="@color/face_liveness_verify_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/liveness_surface_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.baidu.idl.face.platform.ui.widget.FaceDetectRoundView android:id="@id/liveness_face_round" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:background="?face_liveness_verify_bg" android:layout_width="fill_parent" android:layout_height="24.0dip" />
+    <RelativeLayout android:id="@id/relative_add_image_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/relative_add_image_view2" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/liveness_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="23.0dip" android:layout_marginTop="20.0dip" android:src="@drawable/collect_image_close_selector" />
+    <ImageView android:id="@id/but_language" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="20.0dip" android:src="@mipmap/icon_en" android:layout_toLeftOf="@id/liveness_sound" />
+    <ImageView android:id="@id/liveness_sound" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginRight="21.0dip" android:src="@mipmap/icon_titlebar_voice2" android:layout_alignParentRight="true" />
+    <ImageView android:id="@id/liveness_success_image" android:visibility="invisible" android:layout_width="45.0dip" android:layout_height="45.0dip" android:src="@mipmap/ic_success" />
+    <TextView android:textSize="22.0sp" android:textColor="#ff000000" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/liveness_top_tips" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/faceLivenessMovetoFrameText" android:layout_below="@id/liveness_close" android:layout_centerHorizontal="true" />
+    <ImageView android:background="@mipmap/icon_collect_bottom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <TextView android:textSize="@dimen/collect_bottom_font" android:textColor="@color/collect_bottom_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:text="@string/collect_bottom_txt" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <HorizontalScrollView android:id="@id/horizon1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="horizontal" android:id="@id/liveness_result_image_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </HorizontalScrollView>
+    <HorizontalScrollView android:id="@id/horizon2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:layout_above="@id/horizon1">
+        <LinearLayout android:orientation="horizontal" android:id="@id/liveness_result_image_layout2" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </HorizontalScrollView>
+    <View android:id="@id/view_live_bg" android:background="#77000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:layout_alignParentBottom="true">
+        <TextView android:textSize="14.0sp" android:textColor="@color/return_stroke" android:layout_gravity="center_horizontal" android:id="@id/text_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/return_stroke" android:layout_gravity="center_horizontal" android:id="@id/text_idcardnum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+    </LinearLayout>
+</RelativeLayout>

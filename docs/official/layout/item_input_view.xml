@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjq.shape.layout.ShapeRelativeLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/root_view" android:layout_width="fill_parent" android:layout_height="56.0dip" app:shape_radius="15.0dip" app:shape_solidColor="@color/exo_white"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/icon" android:layout_width="19.0dip" android:layout_height="19.0dip" android:layout_marginLeft="27.0dip" android:src="@drawable/ic_register_wechat_n" android:layout_centerVertical="true" />
+    <com.sheguo.tggy.activity.ui.wiget.SwtichTextOrEditView android:textSize="17.0sp" android:id="@id/input" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:layout_marginRight="30.0dip" android:singleLine="true" android:layout_toRightOf="@id/icon" />
+    <TextView android:textSize="14.0sp" android:textColor="#ffb9b9b9" android:gravity="center" android:id="@id/righttxt" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="20.0dip" android:text="2/12" android:layout_alignParentRight="true" />
+    <ImageView android:id="@id/rightimg" android:visibility="visible" android:layout_width="6.0dip" android:layout_height="fill_parent" android:layout_marginRight="20.0dip" android:src="@drawable/ic_register_label_n" android:layout_alignParentRight="true" />
+</com.hjq.shape.layout.ShapeRelativeLayout>

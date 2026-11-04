@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjq.shape.layout.ShapeLinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:shape_angle="270.0" app:shape_endColor="#ffffffff" app:shape_gradientType="linear" app:shape_startColor="#fffff0e9" style="@style/AccountContentLinearLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="44.0dip" />
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_logo_text" android:layout_width="149.0dip" android:layout_height="18.0dip" android:layout_marginTop="50.0dip" android:src="@drawable/icons_logo_text" android:scaleType="fitXY" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_top_tips" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_below="@id/iv_logo_text">
+        <ImageView android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginLeft="15.0dip" android:src="@drawable/app_icon" />
+        <FrameLayout android:background="@drawable/zc_regiest_top" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_marginLeft="11.0dip">
+            <TextView android:textSize="13.0sp" android:textColor="#ff30302f" android:layout_gravity="center" android:paddingLeft="5.0dip" android:paddingRight="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="为保障你的交友体验，请先确认性别" />
+        </FrameLayout>
+    </LinearLayout>
+    <com.hjq.shape.view.ShapeTextView android:textSize="13.0sp" android:gravity="center" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="26.0dip" android:layout_marginLeft="70.0dip" android:layout_marginTop="10.0dip" android:text="提示：性别设置后不可更改" app:shape_radius="6.0dip" app:shape_solidColor="#ffddd7d1" app:shape_textColor="#ffffffff" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/llTop" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="114.0dip">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_male" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/male_view" android:layout_width="72.0dip" android:layout_height="47.0dip" android:src="@drawable/profile_create_sex_male" />
+            <TextView android:textSize="17.0sp" android:textColor="#ff212121" android:gravity="center" android:id="@id/male_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="男" />
+            <com.hjq.shape.view.ShapeCheckBox android:id="@id/cb_male" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26.0dip" app:shape_buttonCheckedDrawable="@drawable/register_xb_xz" app:shape_buttonDrawable="@drawable/register_xb_wxz" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_female" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/female_view" android:layout_width="72.0dip" android:layout_height="47.0dip" android:src="@drawable/profile_create_sex_female" />
+            <TextView android:textSize="17.0sp" android:textColor="#ff212121" android:gravity="center" android:id="@id/female_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="女" />
+            <com.hjq.shape.view.ShapeCheckBox android:id="@id/cb_female" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26.0dip" app:shape_buttonCheckedDrawable="@drawable/register_xb_xz" app:shape_buttonDrawable="@drawable/register_xb_wxz" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_width="1.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <include android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="36.0dip" android:layout_marginBottom="36.0dip" layout="@layout/create_info_bottom" />
+</com.hjq.shape.layout.ShapeLinearLayout>

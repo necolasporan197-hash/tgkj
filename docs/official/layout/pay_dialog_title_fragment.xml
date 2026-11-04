@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@drawable/pay_dialog" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/pop_tp_top" android:adjustViewBounds="true" />
+    <ImageView android:layout_gravity="right" android:id="@id/iv_close" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pop_cha" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="#ff373737" android:gravity="center" android:layout_gravity="center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_marginBottom="18.0dip" android:text="解锁相册" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/pay_recycler" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" />
+        <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="@color/color_FFFFFF" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/money_text_view" android:background="@drawable/button_ff8800" android:layout_width="300.0dip" android:layout_height="48.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="24.0dip" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffa05001" android:gravity="center" android:layout_gravity="center" android:id="@id/jump_vip" android:background="@drawable/pay_item_title_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:text="成为尊享会员 免费解锁相册" />
+    </LinearLayout>
+</FrameLayout>

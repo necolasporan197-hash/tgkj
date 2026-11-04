@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pic_tuan" />
+    <TextView android:textSize="15.0sp" android:textColor="#ff30302f" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_width="328.0dip" android:layout_height="0.0dip" android:layout_marginTop="45.0dip" android:text="在青少年模式中，我们选择了一批适合青少年观看的内容，且无法进行充值、购买、内容发布等操作" android:layout_weight="1.0" />
+    <com.hjq.shape.view.ShapeTextView android:textStyle="bold" android:gravity="center" android:id="@id/sb_open" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip" android:layout_marginBottom="45.0dip" android:text="开启青少年模式" app:shape_radius="15.0dip" app:shape_solidColor="#fff9f9f9" app:shape_strokeColor="#ffdddddd" app:shape_strokeWidth="1.0dip" app:shape_textColor="#ff61605f" />
+    <com.hjq.shape.view.ShapeTextView android:textStyle="bold" android:gravity="center" android:id="@id/sb_close" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip" android:layout_marginBottom="45.0dip" android:text="关闭青少年模式" app:shape_endColor="#ffff7f00" app:shape_radius="15.0dip" app:shape_startColor="#ffff5000" app:shape_textColor="@color/exo_white" />
+</LinearLayout>

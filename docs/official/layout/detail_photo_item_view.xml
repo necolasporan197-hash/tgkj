@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardCornerRadius="10.0dip" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.business.widget.SquareImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <FrameLayout android:layout_gravity="center" android:id="@id/operation" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.hjq.shape.layout.ShapeLinearLayout android:orientation="vertical" android:id="@id/photo_destoy" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:shape_radius="4.0dip" app:shape_solidColor="#99000000">
+            <ImageView android:layout_gravity="center_horizontal" android:layout_width="24.0dip" android:layout_height="27.0dip" android:layout_marginTop="32.0dip" android:src="@drawable/ic_profile_fh_n" />
+            <TextView android:textSize="11.0sp" android:textColor="@color/color_FFFFFF" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="已焚阅" />
+        </com.hjq.shape.layout.ShapeLinearLayout>
+        <com.hjq.shape.layout.ShapeRelativeLayout android:id="@id/blurn" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:shape_radius="4.0dip" app:shape_solidColor="#99000000">
+            <ImageView android:id="@id/icon_yhjf" android:layout_width="24.0dip" android:layout_height="27.0dip" android:layout_marginTop="32.0dip" android:src="@drawable/home_photo_yhjf" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="11.0sp" android:textColor="@color/color_FFFFFF" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="阅后即焚" android:layout_below="@id/icon_yhjf" />
+        </com.hjq.shape.layout.ShapeRelativeLayout>
+        <RelativeLayout android:id="@id/playview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_profile_play_n" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/more_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="22.0sp" android:textColor="@color/color_FFFFFF" android:id="@id/more_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </FrameLayout>
+    <ImageView android:id="@id/benren" android:background="@drawable/homepage_brbq" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="15.0dip" />
+</androidx.cardview.widget.CardView>

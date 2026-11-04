@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="left" android:id="@id/view_bg" android:background="@drawable/pic_pop_hongbao_n" android:layout_width="331.0dip" android:layout_height="439.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="30.0dip" android:layout_marginBottom="5.0dip" />
+    <ImageView android:layout_gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="40.0dip" android:src="@drawable/ic_pop_vipdz_n" />
+    <ImageView android:layout_gravity="right" android:id="@id/close" android:paddingLeft="10.0dip" android:paddingTop="40.0dip" android:paddingRight="15.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pop_lose_n" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="70.0dip">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pic_pop_wechat_n" />
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/color_401B10" android:gravity="center" android:id="@id/permission_title" android:layout_width="231.0dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:maxLines="2" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/color_4E271B" android:gravity="center" android:id="@id/permission_des" android:layout_width="231.0dip" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="111" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="bottom|center" android:orientation="vertical" android:id="@id/ll_oprea" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip">
+        <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="@color/color_FFE486" android:gravity="center" android:layout_gravity="center" android:id="@id/wechat" android:background="@drawable/shape_pay_dialog_contact" android:layout_width="266.0dip" android:layout_height="48.0dip" android:text="查看微信号" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_change_vip" android:background="@drawable/btn_pop_button_n" android:layout_width="270.0dip" android:layout_height="83.0dip" android:layout_marginTop="13.0dip">
+            <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="@color/color_A32902" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/change_vip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:text="成为会员，免费查看" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_gravity="bottom|center|left" android:background="@drawable/ic_pop_vipdz2_n" android:layout_width="48.0dip" android:layout_height="33.0dip" />
+</FrameLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sheguo.tggy.activity.ui.wiget.detail.DetailFemaleCommonInfoView android:gravity="bottom" android:layout_gravity="top" android:background="@drawable/female_common_info" android:layout_width="fill_parent" android:layout_height="450.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/ll_info" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="10.0dip" android:layout_alignParentBottom="true">
+        <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/nickName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="傅瑾行" android:maxLines="1" android:singleLine="true" />
+        <ImageView android:id="@id/iv_rzbs" android:layout_width="34.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/rzbs" android:layout_toRightOf="@id/nickName" android:layout_alignBottom="@id/nickName" android:layout_centerVertical="true" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_toRightOf="@id/iv_rzbs" android:layout_alignTop="@id/nickName" android:layout_alignBottom="@id/nickName" android:layout_centerVertical="true">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/online" android:visibility="gone" android:layout_width="8.0dip" android:layout_height="8.0dip" android:src="@drawable/ic_home_online_n" />
+            <com.hjq.shape.view.ShapeTextView android:textSize="10.0sp" android:textColor="@color/color_FFFFFF" android:id="@id/online_text" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="15.0dip" android:text="在线" app:shape_radius="8.0dip" app:shape_solidColor="#4d000000" />
+        </LinearLayout>
+    </RelativeLayout>
+    <com.hjq.shape.layout.ShapeLinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/rnrz" android:paddingLeft="8.0dip" android:paddingRight="6.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="22.0dip" android:layout_marginLeft="15.0dip" android:layout_marginBottom="80.0dip" android:layout_alignParentBottom="true" app:shape_radius="6.0dip" app:shape_solidColor="#66000000">
+        <ImageView android:id="@id/iv_auth_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/xqy_xcrz" />
+        <TextView android:textSize="11.0sp" android:textColor="#ffffffff" android:id="@id/tv_confirm_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="相册带有‘本人’标识的为认证照片" />
+    </com.hjq.shape.layout.ShapeLinearLayout>
+    <com.hjq.shape.view.ShapeTextView android:textSize="9.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/tv_comment_tips" android:paddingLeft="4.0dip" android:paddingTop="2.0dip" android:paddingRight="4.0dip" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text="差评待处理" android:layout_above="@id/ll_actions" android:layout_alignParentEnd="true" app:shape_bottomLeftRadius="5.0dip" app:shape_bottomRightRadius="1.0dip" app:shape_solidColor="#ffff731c" app:shape_strokeColor="@color/exo_white" app:shape_strokeWidth="1.0dip" app:shape_topLeftRadius="5.0dip" app:shape_topRightRadius="5.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_actions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="100.0dip" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_pingjia" android:background="@drawable/ic_profile_pjk" android:layout_width="wrap_content" android:layout_height="47.0dip">
+            <ImageView android:layout_width="17.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_profile_pj_n" />
+            <TextView android:textSize="11.0sp" android:textColor="@color/color_FFFFFF" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/pingjia" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="right" android:orientation="vertical" android:id="@id/gz_ll" android:background="@drawable/ic_profile_pjk" android:layout_width="wrap_content" android:layout_height="47.0dip" android:layout_marginTop="15.0dip">
+            <ImageView android:id="@id/gzimg" android:layout_width="17.0dip" android:layout_height="20.0dip" android:src="@drawable/user_gz_bg" />
+            <TextView android:textSize="11.0sp" android:textColor="@color/exo_white" android:id="@id/gztxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="关注" />
+        </LinearLayout>
+    </LinearLayout>
+</com.sheguo.tggy.activity.ui.wiget.detail.DetailFemaleCommonInfoView>

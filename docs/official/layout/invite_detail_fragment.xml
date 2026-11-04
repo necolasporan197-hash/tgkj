@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:background="@color/color_FFFFFF" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.sheguo.tggy.view.widget.ThemedSwipeRefreshLayout android:id="@id/swipe_refresh_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.sheguo.tggy.view.widget.StateLayout android:id="@id/state_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.sheguo.tggy.activity.ui.wiget.DynamicItemView android:id="@id/invite_item_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" />
+                    <com.hjq.shape.layout.ShapeLinearLayout android:layout_width="fill_parent" android:layout_height="36.0dip" app:shape_solidColor="#fff7f7f7">
+                        <TextView android:textSize="13.0sp" android:textColor="#ff61605f" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="报名详情" android:layout_weight="1.0" />
+                        <TextView android:textSize="11.0sp" android:textColor="#ffbababa" android:layout_gravity="center_vertical" android:id="@id/tv_add_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:text="共2人报名" />
+                    </com.hjq.shape.layout.ShapeLinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="350.0dip" />
+                </LinearLayout>
+            </com.sheguo.tggy.view.widget.StateLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.sheguo.tggy.view.widget.ThemedSwipeRefreshLayout>
+</LinearLayout>

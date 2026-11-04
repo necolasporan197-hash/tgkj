@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:background="@drawable/dialog_bg" android:layout_width="300.0dip" android:layout_height="wrap_content" app:cardCornerRadius="15.0dip" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/pop_xqy_pic" android:scaleType="centerCrop" />
+        <com.hjq.shape.layout.ShapeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="101.0dip" app:shape_solidColor="@color/exo_white" app:shape_topLeftRadius="15.0dip" app:shape_topRightRadius="15.0dip">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="24.0dip" />
+            <androidx.appcompat.widget.AppCompatEditText android:textSize="12.0sp" android:textColor="#ff494949" android:textColorHint="#ffb9b9b9" android:gravity="left" android:id="@id/edit_text" android:background="@drawable/custom_service_edit_bg" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="84.0dip" android:layout_marginLeft="24.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="24.0dip" android:hint="可选填，您的评价让我们做的更好~" />
+            <com.sheguo.tggy.view.widget.NextButton android:layout_gravity="center" android:id="@id/ok_gradient_button" android:background="@drawable/button_ff8800" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="32.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="32.0dip" android:layout_marginBottom="39.0dip" app:text="匿名评价" app:textSize="18.0sp" />
+        </com.hjq.shape.layout.ShapeLinearLayout>
+    </FrameLayout>
+    <ImageView android:layout_gravity="center|right|top" android:id="@id/close_dialog" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pop_cha" />
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjq.shape.layout.ShapeLinearLayout android:orientation="vertical" android:id="@id/ll_group" android:layout_width="fill_parent" android:layout_height="fill_parent" app:shape_angle="270.0" app:shape_endColor="#ffffffff" app:shape_startColor="#fffff0e9"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="44.0dip" />
+    <FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.hjq.shape.layout.ShapeLinearLayout>

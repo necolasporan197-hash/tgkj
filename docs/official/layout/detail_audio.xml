@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sheguo.tggy.activity.ui.wiget.detail.DetailAudio android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/color_171716" android:id="@id/title" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="TA的声音" android:drawableLeft="@drawable/homepage_audio" android:drawablePadding="9.0dip" />
+    <RelativeLayout android:id="@id/rl_bg" android:background="@drawable/bg_personal_sound" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="15.0dip">
+        <ImageView android:id="@id/iv_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:src="@drawable/button_personal_play1" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_toRightOf="@id/iv_play" android:layout_centerVertical="true">
+            <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/tv_title1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="她的语音条" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffffddc5" android:id="@id/tv_title2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:text="听听她说了什么~" />
+        </LinearLayout>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/icon_personal_sound" android:layout_toLeftOf="@id/tv_time" android:layout_centerVertical="true" />
+        <TextView android:textSize="15.0sp" android:textColor="#ffffffff" android:id="@id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" android:text="7S" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="#fff7f7f7" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+</com.sheguo.tggy.activity.ui.wiget.detail.DetailAudio>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:gravity="center" android:layout_gravity="center" android:id="@id/homeTop" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip">
+            <TextView android:textSize="@dimen/size_15_sp" android:textColor="@color/color_61605F" android:id="@id/dynamic_city" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="长沙" android:drawablePadding="6.0dip" android:drawableEnd="@drawable/ic_nav_arrow_n" />
+            <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/color_181716" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dynamic" android:layout_centerHorizontal="true" />
+            <ImageView android:id="@id/sexlogo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_home_gender_n" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <com.sheguo.tggy.view.widget.TitleBar android:id="@id/other_dynamic_titlebar" android:layout_width="fill_parent" android:layout_height="44.0dip" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" layout="@layout/dy_header_userinfo" />
+        <com.sheguo.tggy.activity.ui.wiget.SgRefreshLayout android:id="@id/refresh_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="15.0dip" />
+        </com.sheguo.tggy.activity.ui.wiget.SgRefreshLayout>
+    </LinearLayout>
+</FrameLayout>

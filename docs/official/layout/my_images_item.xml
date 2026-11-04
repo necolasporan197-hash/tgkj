@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_gravity="bottom|center|left" android:layout_width="81.0dip" android:layout_height="81.0dip" app:cardCornerRadius="6.0dip" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.SquareImageView android:id="@id/image_view" android:layout_width="81.0dip" android:layout_height="81.0dip" android:scaleType="centerCrop" />
+    <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="bottom" android:id="@id/desc" android:background="#ffff6f26" android:layout_width="81.0dip" android:layout_height="18.0dip" android:text="阅后即焚" />
+    <TextView android:textSize="11.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/benren" android:background="@drawable/ic_me_br" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="本人" />
+</androidx.cardview.widget.CardView>

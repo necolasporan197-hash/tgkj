@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.hjq.shape.layout.ShapeLinearLayout android:paddingLeft="11.0dip" android:paddingTop="10.0dip" android:paddingRight="5.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="40.0dip" app:shape_radius="10.0dip" app:shape_solidColor="#fff7f7f7">
+        <ImageView android:layout_width="12.0dip" android:layout_height="10.0dip" android:layout_marginTop="3.0dip" android:src="@drawable/fbkp_report" />
+        <TextView android:textSize="13.0sp" android:textColor="#ffb9b9b9" android:id="@id/content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="请共同维护平台清朗环境，交友语音不得使用涉黄、涉恐、涉暴、涉毒、涉赌、涉政等敏感内容，一经查实将被封禁账号！" />
+    </com.hjq.shape.layout.ShapeLinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#fff4f4f4" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_photo_pay" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="15.0sp" android:textColor="#ff9e9e9e" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:text="我的相册/视频" />
+        <LinearLayout android:orientation="vertical" android:background="@color/color_FFFFFF" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <com.sheguo.tggy.view.widget.SimpleItemView android:id="@id/private_simple_item_view" android:layout_width="fill_parent" android:layout_height="60.0dip" app:rightType="select_box" app:title="相册/视频付费查看" />
+        </LinearLayout>
+        <TextView android:textSize="15.0sp" android:textColor="#ff9e9e9e" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:text="隐身" />
+    </LinearLayout>
+    <View android:id="@id/view_line" android:background="#fff7f7f7" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+    <LinearLayout android:orientation="vertical" android:background="@color/color_FFFFFF" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <com.sheguo.tggy.view.widget.SimpleItemView android:id="@id/hide_home_simple_item_view" android:layout_width="fill_parent" android:layout_height="60.0dip" app:rightType="select_box" app:title="在首页和动态隐藏我" />
+        <com.sheguo.tggy.view.widget.SimpleItemView android:id="@id/hide_distance_simple_item_view" android:layout_width="fill_parent" android:layout_height="60.0dip" app:rightType="select_box" app:title="对他人隐藏我的距离" />
+    </LinearLayout>
+</LinearLayout>

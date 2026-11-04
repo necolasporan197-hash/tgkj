@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.hjq.shape.layout.ShapeRelativeLayout android:id="@id/rl_burn" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="39.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" app:shape_radius="4.0dip" app:shape_solidColor="#fffff4ed">
+        <ImageView android:id="@id/icon" android:visibility="gone" android:layout_width="15.0dip" android:layout_height="18.0dip" android:layout_marginLeft="15.0dip" android:src="@drawable/ic_profile_yhjf_n" android:layout_centerVertical="true" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff7e2100" android:id="@id/shuliang" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="已有1人焚烧了照片" android:layout_toRightOf="@id/icon" android:layout_centerVertical="true" />
+        <com.hjq.shape.view.ShapeTextView android:textSize="12.0sp" android:textColor="@color/exo_white" android:gravity="center" android:id="@id/burn_recovery_view" android:layout_width="54.0dip" android:layout_height="23.0dip" android:layout_marginRight="15.0dip" android:text="恢复" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:shape_radius="6.0dip" app:shape_solidColor="#ffff731c" />
+    </com.hjq.shape.layout.ShapeRelativeLayout>
+    <com.google.android.material.tabs.TabLayout android:id="@id/tab_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="40.0dip" app:tabIndicator="@drawable/tab_layout_tab_indicator" app:tabIndicatorColor="#ff454556" app:tabIndicatorHeight="1.0dip" />
+    <com.sheguo.tggy.view.widget.SimpleViewPager android:id="@id/simple_view_pager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_weight="1.0" />
+</LinearLayout>

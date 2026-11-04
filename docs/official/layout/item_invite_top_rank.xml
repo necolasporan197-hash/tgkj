@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="#ff9e9e9e" android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="用户" android:layout_weight="3.0" />
+    <TextView android:textSize="14.0sp" android:textColor="#ff9e9e9e" android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="邀请人数（人）" android:layout_weight="3.0" />
+    <TextView android:textSize="14.0sp" android:textColor="#ff9e9e9e" android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="奖励金额（元）" android:layout_weight="3.0" />
+</LinearLayout>

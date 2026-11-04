@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/pay_dialog" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/pay_recycler" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="15.0dip" />
+    <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="@color/color_FFFFFF" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/money_text_view" android:background="@drawable/button_ff8800" android:layout_width="300.0dip" android:layout_height="48.0dip" android:layout_marginTop="30.0dip" android:layout_marginBottom="48.0dip" />
+</LinearLayout>

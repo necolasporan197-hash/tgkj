@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textColor="#ff30302f" android:textColorHint="#ffcecece" android:ellipsize="marquee" android:id="@id/text_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" />
+    <androidx.appcompat.widget.AppCompatEditText android:textSize="15.0sp" android:textColor="#ff30302f" android:textColorHint="#ffcecece" android:id="@id/edit_text" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+</FrameLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/home_add_dialog_shape" android:paddingBottom="39.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="end" android:id="@id/close_view" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginTop="15.0dip" android:src="@drawable/pop_cha" android:scaleType="centerInside" android:layout_marginEnd="15.0dip" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffa6a6a6" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="介绍下自己吧" />
+        </LinearLayout>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:src="@drawable/emo_yfh" />
+        <com.youth.banner.Banner android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="143.0dip" android:layout_marginTop="24.0dip" android:layout_marginBottom="30.0dip" />
+        <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="#ff30302f" android:id="@id/tv_seconds_" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0s" />
+        <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_reset" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="27.0dip" android:layout_marginTop="13.0dip">
+                <ImageView android:id="@id/iv_reset" android:layout_width="54.0dip" android:layout_height="54.0dip" android:src="@drawable/ic_pop_re_n" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="13.0sp" android:textColor="#ff9e9e9e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:text="重录" />
+            </LinearLayout>
+            <FrameLayout android:orientation="vertical" android:id="@id/fl_record" android:background="@drawable/audio_record_bg" android:layout_width="110.0dip" android:layout_height="110.0dip" android:layout_centerHorizontal="true">
+                <View android:layout_gravity="center" android:background="@drawable/audio_record_img_bg" android:layout_width="95.0dip" android:layout_height="95.0dip" />
+                <ImageView android:layout_gravity="center" android:id="@id/iv_start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_pop_sound_n" />
+            </FrameLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_ok" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:layout_marginRight="27.0dip" android:layout_alignParentRight="true">
+                <ImageView android:id="@id/iv_ok" android:layout_width="54.0dip" android:layout_height="54.0dip" android:src="@drawable/icon_check" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="13.0sp" android:textColor="#ff9e9e9e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:text="确认" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip">
+            <TextView android:textSize="13.0sp" android:textColor="#ff9e9e9e" android:gravity="center" android:id="@id/tv_seconds" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="长按录音，录音时长5～15s内" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

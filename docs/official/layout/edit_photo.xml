@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:orientation="vertical" android:background="@color/color_FFFFFF" android:layout_width="375.0dip" android:layout_height="wrap_content" app:cardCornerRadius="15.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/pic_tips_tupian" android:scaleType="centerCrop" />
+    <LinearLayout android:orientation="vertical" android:id="@id/pic_tips_bg" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff30302f" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="33.0dip" android:text="更换头像" />
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff30302f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="重要提示：" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <ImageView android:id="@id/image_star" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:src="@drawable/ic_register_xh_n" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_toLeftOf="@id/image_star">
+                <TextView android:textSize="13.0sp" android:textColor="#ff828282" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="上传真实照片有助于提高交友成功率哦～" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff30302f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="21.0dip" android:layout_marginBottom="10.0dip" android:text="头像示例：" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="67.0dip" android:layout_height="89.0dip" android:layout_marginRight="4.0dip" android:src="@drawable/pic_sy_1" />
+            <ImageView android:layout_width="67.0dip" android:layout_height="89.0dip" android:layout_marginRight="4.0dip" android:src="@drawable/pic_sy_2" />
+            <ImageView android:layout_width="67.0dip" android:layout_height="89.0dip" android:layout_marginRight="4.0dip" android:src="@drawable/pic_sy_3" />
+            <ImageView android:layout_width="67.0dip" android:layout_height="89.0dip" android:layout_marginRight="4.0dip" android:src="@drawable/pic_sy_4" />
+        </LinearLayout>
+        <com.sheguo.tggy.view.widget.NextButton android:layout_gravity="center" android:id="@id/next_button" android:layout_width="266.0dip" android:layout_height="48.0dip" android:layout_marginTop="29.0dip" android:layout_marginBottom="39.0dip" app:nextBg="@drawable/warn_dialog_button" app:nextColor="@color/color_FFFFFF" app:nextSize="17.0sp" app:text="选择照片" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

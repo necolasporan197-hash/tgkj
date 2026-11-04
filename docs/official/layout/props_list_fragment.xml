@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#fff7f7f7" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="44.0dip" />
+    <com.hjq.shape.view.ShapeView android:layout_gravity="start|center|top" android:id="@id/v_props_indicator" android:layout_width="18.0dip" android:layout_height="4.0dip" android:layout_marginLeft="151.0dip" android:layout_marginTop="40.0dip" app:shape_radius="2.0dip" app:shape_solidColor="#ffff731c" />
+    <com.sheguo.tggy.view.widget.ThemedSwipeRefreshLayout android:id="@id/swipe_refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="44.0dip">
+        <com.sheguo.tggy.view.widget.StateLayout android:id="@id/state_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="20.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.sheguo.tggy.view.widget.StateLayout>
+    </com.sheguo.tggy.view.widget.ThemedSwipeRefreshLayout>
+</FrameLayout>

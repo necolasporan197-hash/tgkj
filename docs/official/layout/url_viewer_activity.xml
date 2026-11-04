@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.SimpleViewPager android:id="@id/simple_view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="65.0dip" android:layout_marginBottom="70.0dip" />
+    <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="24.0dip" app:isColored="true" app:leftImage="@drawable/ic_nav_arrow2_n" />
+    <com.hjq.shape.view.ShapeTextView android:textSize="13.0sp" android:textColor="#ffffffff" android:gravity="center|left" android:layout_gravity="bottom" android:id="@id/tv_info" android:paddingLeft="20.0dip" android:paddingBottom="25.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="62.0dip" android:text="在线 | 学生 | 在线 | 长沙" android:drawableLeft="@drawable/list_female_tags" app:shape_angle="270.0" app:shape_centerColor="#d4000000" app:shape_endColor="#ff000000" app:shape_startColor="#00000000" />
+</FrameLayout>

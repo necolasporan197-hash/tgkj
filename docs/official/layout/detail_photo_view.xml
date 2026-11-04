@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sheguo.tggy.activity.ui.wiget.detail.DetailPhotoView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="#ff181716" android:id="@id/photo_title" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TA的相册" android:drawableLeft="@drawable/homepage_album" android:drawablePadding="9.0dip" />
+    <FrameLayout android:id="@id/has_data" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="12.0dip">
+        <androidx.recyclerview.widget.RecyclerView android:layout_gravity="top" android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+        <RelativeLayout android:id="@id/privacy" android:background="@drawable/pic_profile_xcs_n" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="10.0dip">
+            <ImageView android:id="@id/axs_n" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" android:src="@drawable/ic_profile_axs_n" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#fff09153" android:id="@id/tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="相册已上锁，VIP可免费查看" android:layout_below="@id/axs_n" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffff731c" android:gravity="center" android:id="@id/button_tips" android:background="@drawable/pic_ljjs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="立即解锁" android:layout_below="@id/tips" android:layout_centerHorizontal="true" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:layout_below="@id/button_tips" android:layout_centerHorizontal="true">
+                <TextView android:textSize="11.0sp" android:textColor="#ffd38f63" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="( " />
+                <ImageView android:id="@id/iv_video_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:src="@drawable/icon_video" />
+                <TextView android:textSize="11.0sp" android:textColor="#ffd38f63" android:id="@id/tv_video_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" 视频*3 丨 " />
+                <ImageView android:layout_width="11.0dip" android:layout_height="8.0dip" android:layout_marginTop="1.0dip" android:src="@drawable/icon_pohoto" />
+                <TextView android:textSize="11.0sp" android:textColor="#ffd38f63" android:id="@id/tv_photo_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" 照片*6 )" />
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+    <com.hjq.shape.layout.ShapeLinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/rnrz" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="22.0dip" android:layout_marginBottom="15.0dip">
+        <ImageView android:id="@id/iv_auth_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/xqy_xcrz" />
+        <TextView android:textSize="11.0sp" android:textColor="#ffb59881" android:id="@id/tv_confirm_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="带有‘本人’标识的为认证照片~" />
+    </com.hjq.shape.layout.ShapeLinearLayout>
+    <FrameLayout android:id="@id/not_data" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="29.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="29.0dip" android:layout_marginBottom="24.0dip">
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_profile_xckby" />
+    </FrameLayout>
+    <View android:background="#fff7f7f7" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+</com.sheguo.tggy.activity.ui.wiget.detail.DetailPhotoView>

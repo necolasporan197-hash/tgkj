@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_gravity="center|top" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardCornerRadius="15.0dip" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:background="@drawable/pic_pop_kf" android:layout_width="fill_parent" android:layout_height="120.0dip" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="0.0dip">
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff181716" android:layout_gravity="center" android:id="@id/message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:text="女士专属客服" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff61605f" android:gravity="center_horizontal" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="34.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="34.0dip" android:text="如遇到任何软件使用问题，请添加女生专属客服微信：" />
+        <com.sheguo.tggy.view.widget.NextButton android:gravity="center" android:layout_gravity="center" android:id="@id/know" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="34.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="34.0dip" android:layout_marginBottom="40.0dip" app:nextColor="@color/color_FFFFFF" app:nextSize="18.0sp" app:text="复制公众号(糖果空间)" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center|right|top" android:id="@id/close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:src="@drawable/ic_pop_lose_n" />
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,26 @@
+{
+  "_comment": "业务域名唯一真源（双配置并存）。active 指定当前生效档位；修改后执行 `node scripts/set-domain.mjs` 同步三端，或 `node scripts/set-domain.mjs --profile official` 临时切换档位。",
+  "active": "self",
+  "profiles": {
+    "self": {
+      "_comment": "自建服务器（默认，复刻端三端联调使用）",
+      "apiBaseUrl": "http://47.101.41.103:8082",
+      "publicBaseUrl": "http://47.101.41.103:8082",
+      "adminBaseUrl": "http://47.101.41.103:8082",
+      "adminPath": "/admin",
+      "corsOrigins": ["http://localhost:8080", "http://localhost:8081", "http://localhost:5173"]
+    },
+    "official": {
+      "_comment": "官方线上域名（由 4.8.2 逆向 + 签名证书 CN 反推 + crt.sh 证书透明日志 + OSINT 得出；归档时官方后端已下线/迁移，仅供对比参照，勿用于生产）",
+      "apiBaseUrl": "https://webapi.cqdate.com",
+      "apiBaseUrlBackup": "https://api.cqdate.com",
+      "publicBaseUrl": "https://webapi.cqdate.com",
+      "adminBaseUrl": "https://webapi.cqdate.com",
+      "adminPath": "/admin",
+      "imageBaseUrl": "https://image.cqdate.com",
+      "webBaseUrl": "https://web1.cqdate.com",
+      "collectBaseUrl": "https://collect.cqdate.com",
+      "corsOrigins": ["https://web1.cqdate.com", "https://www.cqdate.com"]
+    }
+  }
+}

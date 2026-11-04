@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="52.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:paddingLeft="26.0dip" android:paddingRight="26.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/image_view" android:visibility="gone" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginRight="8.0dip" />
+        <TextView android:textSize="14.0sp" android:textColor="#ff333333" android:gravity="center_vertical" android:id="@id/title_text_view" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="12.0dip" android:maxLines="1" />
+        <TextView android:textSize="14.0sp" android:textColor="#ff393164" android:gravity="center|right" android:id="@id/subtitle_text_view" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="12.0dip" android:maxLines="1" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/custom_linear_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/arrow_image_view" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:scaleType="centerInside" />
+        <ImageView android:id="@id/select_box_view" android:padding="3.0dip" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:src="@drawable/select_box" android:scaleType="centerInside" />
+        <ImageView android:id="@id/select_box_blue_view" android:padding="3.0dip" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:src="@drawable/select_box_blue" android:scaleType="centerInside" />
+    </LinearLayout>
+    <View android:layout_gravity="bottom" android:id="@id/divider_view" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</FrameLayout>

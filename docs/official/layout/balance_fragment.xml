@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.sheguo.tggy.view.widget.ThemedSwipeRefreshLayout android:id="@id/swipe_refresh_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.sheguo.tggy.view.widget.StateLayout android:id="@id/state_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/balance_top_bg" android:layout_width="fill_parent" android:layout_height="110.0dip" android:src="@drawable/bg_wallet_gd_n" android:scaleType="fitXY" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="24.0dip" android:layout_marginBottom="13.0dip" style="@style/main_margin">
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="100.0dip" android:layout_marginTop="0.0dip" android:layout_marginRight="30.0dip" android:layout_weight="1.0">
+                            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                                <TextView android:textSize="12.0sp" android:textColor="#fff9e9db" android:id="@id/count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="总金额(元)" />
+                                <androidx.appcompat.widget.AppCompatTextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/balance_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" app:autoSizeMaxTextSize="24.0sp" app:autoSizeMinTextSize="10.0sp" app:autoSizeTextType="uniform" />
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                                <TextView android:textSize="12.0sp" android:textColor="#fff9e9db" android:id="@id/withdrawal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="可提现余额(元)" />
+                                <androidx.appcompat.widget.AppCompatTextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/withdraw_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" app:autoSizeMaxTextSize="24.0sp" app:autoSizeMinTextSize="10.0sp" app:autoSizeTextType="uniform" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <com.hjq.shape.view.ShapeTextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ffff731c" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_withdraw" android:layout_width="80.0dip" android:layout_height="35.0dip" android:layout_marginRight="15.0dip" android:text="余额提现" app:shape_radius="10.0dip" app:shape_solidColor="#ffffe8d5" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip">
+                    <ImageView android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_marginTop="3.0dip" android:src="@drawable/ic_balance_tz" />
+                    <TextView android:textSize="13.0sp" android:textColor="#ffb9b9b9" android:id="@id/description_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="当用户与您私聊获得的红包、举报成功后返回的金额将返还到余额，进账三天后即可发起提现，提现时收取5%的手续费用。" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="15.0dip">
+                    <View android:background="@drawable/balance_pay_bg" android:visibility="gone" android:layout_width="5.0dip" android:layout_height="11.0dip" />
+                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff181716" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="支付宝账号" android:layout_weight="1.0" />
+                </LinearLayout>
+                <com.hjq.shape.layout.ShapeFrameLayout android:id="@id/fl_edit_account" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="18.0dip" android:layout_marginRight="15.0dip" app:shape_radius="8.0dip" app:shape_solidColor="#fff6f6f6">
+                    <TextView android:textSize="14.0sp" android:textColor="#ff9e9e9e" android:layout_gravity="center_vertical" android:id="@id/alipay_input" android:paddingLeft="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <ImageView android:layout_gravity="center|right" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/bg_wallet_arrow" />
+                </com.hjq.shape.layout.ShapeFrameLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_mx" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="15.0dip">
+                    <View android:background="@drawable/balance_pay_bg" android:visibility="gone" android:layout_width="5.0dip" android:layout_height="11.0dip" />
+                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff181716" android:id="@id/mx_txt" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="果豆明细" android:layout_weight="1.0" />
+                </LinearLayout>
+                <FrameLayout android:background="@drawable/bg_tixian_ditu_n" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" />
+                </FrameLayout>
+            </LinearLayout>
+        </com.sheguo.tggy.view.widget.StateLayout>
+    </com.sheguo.tggy.view.widget.ThemedSwipeRefreshLayout>
+</LinearLayout>

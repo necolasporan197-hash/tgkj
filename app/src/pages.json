@@ -1,0 +1,99 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^Tg(.*)": "@/components/Tg$1.vue"
+    }
+  },
+  "pages": [
+    {
+      "path": "pages/launch/launch",
+      "style": { "navigationStyle": "custom", "navigationBarTextStyle": "white" }
+    },
+    {
+      "path": "pages/main/main",
+      "style": { "navigationStyle": "custom", "navigationBarTextStyle": "black", "enablePullDownRefresh": false }
+    },
+    {
+      "path": "pages/login/login",
+      "style": { "navigationStyle": "custom", "navigationBarTextStyle": "black" }
+    },
+    {
+      "path": "pages/login/register",
+      "style": { "navigationStyle": "custom", "navigationBarTextStyle": "black" }
+    },
+    {
+      "path": "pages/login/register-sex",
+      "style": { "navigationStyle": "custom", "navigationBarTextStyle": "black" }
+    },
+    {
+      "path": "pages/login/register-info",
+      "style": { "navigationStyle": "custom", "navigationBarTextStyle": "black" }
+    },
+
+    { "path": "pages/user/detail", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/user/photos", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/user/visitors", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/user/follows", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/user/blacklist", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/user/unlock-records", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/user/impressions", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/user/impression-give", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/profile/edit", "style": { "navigationStyle": "custom" } },
+
+    { "path": "pages/moment/detail", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/moment/publish", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/moment/mine", "style": { "navigationStyle": "custom" } },
+
+    { "path": "pages/chat/chat", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/message/notification", "style": { "navigationStyle": "custom" } },
+
+    { "path": "pages/vip/vip", "style": { "navigationStyle": "custom" } },
+
+    { "path": "pages/wallet/wallet", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/wallet/withdraw", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/wallet/transactions", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/wallet/coins", "style": { "navigationStyle": "custom" } },
+
+    { "path": "pages/verification/index", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/verification/submit", "style": { "navigationStyle": "custom" } },
+
+    { "path": "pages/invite/invite", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/invite/ranking", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/invite/records", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/invite/list", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/invite/post", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/invite/detail", "style": { "navigationStyle": "custom" } },
+
+    { "path": "pages/team/team", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/city/city", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/search/search", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/gift/send", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/gift/records", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/report/report", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/submission/index", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/settings/index", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/settings/doc", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/settings/customer", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/settings/feedback", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/settings/cancellation", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/settings/jurisdiction", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/settings/notify", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/settings/privacy", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/settings/young", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/task/index", "style": { "navigationStyle": "custom" } },
+    { "path": "pages/sight/index", "style": { "navigationStyle": "custom" } }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "糖果空间",
+    "navigationBarBackgroundColor": "#FDFDFE",
+    "backgroundColor": "#F5F6F8",
+    "backgroundColorTop": "#F5F6F8",
+    "backgroundColorBottom": "#F5F6F8"
+  },
+  "condition": {
+    "current": 0,
+    "list": [{ "name": "首页", "path": "pages/main/main" }]
+  }
+}

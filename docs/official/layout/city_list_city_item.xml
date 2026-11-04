@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="#ff61605f" android:gravity="center_vertical" android:id="@id/text_view" android:background="@color/color_FFFFFF" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" />
+    <include android:layout_width="fill_parent" android:layout_height="0.5dip" layout="@layout/divider_layout" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/fl_root" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="28.0dip">
+        <ImageView android:layout_gravity="bottom|center" android:id="@id/icon" android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/pic_me_lxkf" />
+        <TextView android:layout_gravity="center|left|top" android:id="@id/red_point_view" android:background="@drawable/main_tab_dot" android:visibility="gone" android:layout_width="8.0dip" android:layout_height="8.0dip" android:layout_marginLeft="40.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="25.0dip" />
+        <com.hjq.shape.view.ShapeTextView android:textSize="7.0sp" android:textColor="@color/color_FFFFFF" android:gravity="center" android:layout_gravity="center|left|top" android:id="@id/jiaobiao" android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="11.0dip" android:layout_marginLeft="30.0dip" android:minWidth="17.0dip" app:shape_bottomLeftRadius="1.0dip" app:shape_bottomRightRadius="5.0dip" app:shape_solidColor="#ffff731c" app:shape_topLeftRadius="5.0dip" app:shape_topRightRadius="5.0dip" />
+        <ImageView android:layout_gravity="center|left|top" android:id="@id/jiaobiaoicon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="17.0dip" android:layout_marginLeft="30.0dip" android:layout_marginTop="-3.0dip" android:src="@drawable/me_jiaobiao_hot" />
+    </FrameLayout>
+    <TextView android:textSize="12.0sp" android:textColor="#ff494949" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="关注公众号" />
+</LinearLayout>

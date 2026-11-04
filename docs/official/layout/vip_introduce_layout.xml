@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="20.0dip">
+        <ImageView android:visibility="gone" android:layout_width="10.0dip" android:layout_height="wrap_content" android:src="@drawable/qizi_icon" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/color_E7B268" android:id="@id/tvText1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="查看资料" />
+        <TextView android:textSize="12.0sp" android:textColor="#ff7c7c7c" android:id="@id/tvText2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="每天不限次数查看女士" />
+    </LinearLayout>
+</LinearLayout>

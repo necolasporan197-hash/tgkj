@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sheguo.tggy.view.widget.TitleBar android:id="@id/title_bar" android:layout_width="fill_parent" android:layout_height="44.0dip" />
+    <com.sheguo.tggy.activity.ui.wiget.ItemInputView android:id="@id/item_input_view" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="50.0dip" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="24.0dip">
+        <ImageView android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_marginTop="3.0dip" android:src="@drawable/ic_register_xh_n" />
+        <TextView android:textSize="13.0sp" android:textColor="#ffb9b9b9" android:id="@id/content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="昵称设置后需要人工审核后才能显示" />
+    </LinearLayout>
+    <com.sheguo.tggy.view.widget.NextButton android:layout_gravity="center" android:id="@id/submit" android:layout_width="315.0dip" android:layout_height="50.0dip" android:layout_marginTop="61.0dip" app:text="确定" />
+</LinearLayout>

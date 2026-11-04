@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true">
+        <com.sheguo.tggy.view.widget.SimpleItemView android:id="@id/young_model_simple_item_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:rightType="arrow" app:title="青少年模式" />
+        <com.sheguo.tggy.view.widget.SimpleItemView android:id="@id/private_simple_item_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:rightType="arrow" app:title="隐私设置" />
+        <com.sheguo.tggy.view.widget.SimpleItemView android:id="@id/blacklist_simple_item_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:rightType="arrow" app:title="黑名单" />
+        <com.sheguo.tggy.view.widget.SimpleItemView android:id="@id/service_simple_item_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:rightType="arrow" app:title="常见问题" />
+        <com.sheguo.tggy.view.widget.SimpleItemView android:id="@id/jurisdiction" android:layout_width="fill_parent" android:layout_height="wrap_content" app:rightType="arrow" app:title="系统权限管理" />
+        <com.sheguo.tggy.view.widget.SimpleItemView android:id="@id/tzkg_simple_item_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:rightType="arrow" app:title="通知开关" />
+        <com.sheguo.tggy.view.widget.SimpleItemView android:id="@id/feedback_simple_item_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:rightType="arrow" app:title="意见反馈" />
+        <View android:background="#fff9f9f9" android:layout_width="fill_parent" android:layout_height="7.0dip" />
+        <com.sheguo.tggy.view.widget.SimpleItemView android:id="@id/agreement" android:layout_width="fill_parent" android:layout_height="wrap_content" app:rightType="arrow" app:title="用户使用协议" />
+        <com.sheguo.tggy.view.widget.SimpleItemView android:id="@id/privacy" android:layout_width="fill_parent" android:layout_height="wrap_content" app:rightType="arrow" app:title="用户隐私政策" />
+        <View android:background="#fff9f9f9" android:layout_width="fill_parent" android:layout_height="7.0dip" />
+        <com.sheguo.tggy.view.widget.SimpleItemView android:id="@id/logoff" android:layout_width="fill_parent" android:layout_height="wrap_content" app:rightType="arrow" app:title="注销账号" />
+        <com.sheguo.tggy.view.widget.SimpleItemView android:id="@id/update_simple_item_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:rightType="arrow" app:title="检查新版本" />
+        <com.sheguo.tggy.view.widget.SimpleItemView android:id="@id/zhxx_simple_item_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:dividerVisible="true" app:rightType="none" app:title="账号信息" />
+        <com.sheguo.tggy.view.widget.SimpleItemView android:id="@id/logout_simple_item_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:rightType="arrow" app:title="退出账号" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffbfbec5" android:gravity="center" android:id="@id/revert_agreement" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="50.0dip" android:text="撤回同意协议" />
+    </LinearLayout>
+</ScrollView>

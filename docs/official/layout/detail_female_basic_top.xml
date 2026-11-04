@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sheguo.tggy.activity.ui.wiget.detail.DetailFemaleTopView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="450.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/avatar_view" android:layout_width="fill_parent" android:layout_height="450.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom|center|right" android:id="@id/ll_audio" android:background="@drawable/detail_voice_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="43.0dip" android:layout_marginBottom="115.0dip" android:minWidth="70.0dip">
+        <TextView android:textSize="@dimen/size_15_sp" android:textColor="#ffff8802" android:id="@id/voice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:text="56’S" />
+        <ImageView android:id="@id/playview" android:background="@drawable/detail_play_receive" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+    </LinearLayout>
+</com.sheguo.tggy.activity.ui.wiget.detail.DetailFemaleTopView>
