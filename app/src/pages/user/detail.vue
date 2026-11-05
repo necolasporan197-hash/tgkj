@@ -194,13 +194,106 @@
           <view class="gap" />
         </view>
 
-        <!-- ============ 公共：动态邀约 detail_bottom ============ -->
-        <view class="dyn-sec">
-          <view class="sec__head">
-            <image class="sec__icon" src="/static/official/homepage_dt.png" />
-            <text class="sec__title">动态邀约</text>
+        <!-- ============ 公共：动态邀约 detail_bottom（官方仅异性浏览可见） ============ -->
+        <view v-if="dynVisible" class="dyn-sec">
+          <view class="dyn-head">
+            <image class="dyn-head__icon" src="/static/official/homepage_dt.png" />
+            <text class="dyn-head__title">动态邀约</text>
+            <view class="dyn-head__spacer" />
+            <view v-if="dynHasMore" class="dyn-head__more" @tap="toMoreDynamic">
+              <text class="dyn-head__more-text">更多</text>
+              <image class="dyn-head__more-arrow" src="/static/official/homepag_more_arrow.png" />
+            </view>
           </view>
-          <view class="dyn-empty">
+
+          <view v-if="dynList.length" class="dyn-list">
+            <view v-for="(it, i) in dynList" :key="it.kind + '-' + it.id" class="dyn-item">
+              <!-- 时间头（item_detail_dynamic / item_detail_invite 顶部 RelativeLayout） -->
+              <view class="dyn-item__head">
+                <text class="dyn-item__day">{{ dayNum(it) }}</text>
+                <text class="dyn-item__month">{{ monthText(it) }}</text>
+                <text v-if="showYear(i)" class="dyn-item__year">{{ yearText(it) }}</text>
+                <view class="dyn-item__spacer" />
+                <view v-if="it.kind === 'invite'" class="dyn-item__report" @tap="dynReport(it)">
+                  <image class="dyn-item__report-icon" src="/static/official/ic_profile1_syh.png" />
+                </view>
+              </view>
+
+              <!-- 竖线 + 内容列 -->
+              <view class="dyn-item__body">
+                <view class="dyn-item__line" />
+                <view class="dyn-item__col">
+                  <text
+                    v-if="headText(it)"
+                    class="dyn-item__tag"
+                    :class="{ 'dyn-item__tag--invite': it.kind === 'invite' }"
+                    >{{ headText(it) }}</text
+                  >
+
+                  <view v-if="(it.images || []).length" class="dyn-photos">
+                    <image
+                      v-for="(p, pi) in it.images.slice(0, 9)"
+                      :key="pi"
+                      class="dyn-photos__img"
+                      :style="photoStyle(it)"
+                      :src="mediaUrl(p)"
+                      mode="aspectFill"
+                      @tap="previewDyn(it, pi)"
+                    />
+                  </view>
+
+                  <view class="dyn-caps" :class="{ 'dyn-caps--invite': it.kind === 'invite' }">
+                    <view class="caps__box">
+                      <image class="caps__icon" src="/static/official/dt_activity.png" />
+                      <text class="caps__text">{{ capsActivity(it) }}</text>
+                    </view>
+                    <view class="caps__box caps__box--day">
+                      <image class="caps__icon" src="/static/official/dt_time.png" />
+                      <text class="caps__text">{{ capsDay(it) }}</text>
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+              <!-- 底部：动态（点赞 + 举报） -->
+              <view v-if="it.kind === 'moment'" class="dyn-foot">
+                <view class="dyn-like" @tap="dynLike(it)">
+                  <image
+                    class="dyn-like__icon"
+                    :src="it.liked ? '/static/official/dt_like2.png' : '/static/official/dt_like1.png'"
+                  />
+                  <text class="dyn-like__count">{{ it.likeCount || 0 }}</text>
+                </view>
+                <view class="dyn-report" @tap="dynReport(it)">
+                  <image class="dyn-item__report-icon" src="/static/official/ic_profile1_syh.png" />
+                </view>
+              </view>
+
+              <!-- 底部：邀约（热度 + 立即报名） -->
+              <view v-else class="dyn-hot">
+                <view v-if="(it.pile || []).length" class="dyn-pile">
+                  <image
+                    v-for="(p, pi) in it.pile.slice(0, 4)"
+                    :key="pi"
+                    class="dyn-pile__img"
+                    :src="mediaUrl(p.avatar)"
+                  />
+                </view>
+                <view class="dyn-hot__tag">
+                  <image class="dyn-hot__bg" :src="hotTag(it)" :style="hotBgStyle(it)" />
+                  <text class="dyn-hot__value">{{ hotValue(it) }}</text>
+                </view>
+                <view class="dyn-hot__spacer" />
+                <view class="dyn-hot__btn" :class="{ 'dyn-hot__btn--joined': it.joined }" @tap="dynJoin(it)">
+                  <text class="dyn-hot__btn-text">{{ it.joined ? '已报名' : '立即报名' }}</text>
+                </view>
+              </view>
+
+              <view v-if="i < dynList.length - 1" class="dyn-item__divider" />
+            </view>
+          </view>
+
+          <view v-else class="dyn-empty">
             <image class="dyn-empty__icon" src="/static/official/empty_default_empty.png" />
             <text class="dyn-empty__text">暂无动态</text>
           </view>
@@ -273,11 +366,11 @@
 </template>
 
 <script>
-import { userApi } from '@/api'
+import { userApi, momentApi, inviteEventApi } from '@/api'
 import { userStore } from '@/store/user'
 import { mediaUrl } from '@/api/request'
 import { toast, nav, back, confirm, copy, previewImage } from '@/utils/ui'
-import { ageOf, formatDistance, timeAgo } from '@/utils/format'
+import { ageOf, formatDistance, timeAgo, parseTime, formatTime } from '@/utils/format'
 
 const TAGS_BG_COLOR = ['#FFF3E5', '#ECF3E0', '#FFF3F1', '#ECF2FF', '#F2EDFF', '#FFF7DC']
 const TAGS_TEXT_COLOR = ['#F46B0F', '#78C115', '#EE4D24', '#4C85FF', '#6E51C1', '#D8A511']
@@ -292,7 +385,10 @@ export default {
       moreOpen: false,
       audioPlaying: false,
       navBottom: 0,
-      scrollTop: 0
+      scrollTop: 0,
+      dynList: [],
+      dynHasMore: false,
+      dynPageSize: 20
     }
   },
   computed: {
@@ -407,6 +503,14 @@ export default {
       if (i > 1000) return 1
       if (i < 50) return 0
       return Math.max(0, 1 - Math.floor((i * 256) / 1000) / 256 - 0.5)
+    },
+    /** 动态邀约整块：官方 detailBottomView.setVisibility(!isOpposite(sex) ? 8 : 0)，即仅异性浏览可见 */
+    dynVisible() {
+      const u = this.user
+      if (!u) return false
+      const viewedFemale = u.gender === 2
+      const viewerFemale = this.store.gender === 2
+      return viewedFemale !== viewerFemale
     }
   },
   onLoad(q) {
@@ -435,6 +539,166 @@ export default {
       } finally {
         this.loading = false
       }
+      this.loadDynamic()
+    },
+    /** 动态邀约：moments({userId}) + invite-events({userId}) 双源合并后按时间倒序 */
+    async loadDynamic() {
+      try {
+        const [ms, es] = await Promise.all([
+          momentApi.list({ userId: this.id, pageSize: this.dynPageSize }),
+          inviteEventApi.list({ userId: this.id, pageSize: this.dynPageSize })
+        ])
+        const list = []
+        for (const m of (ms && ms.list) || []) {
+          list.push({
+            kind: 'moment',
+            id: m.id,
+            createdAt: m.createdAt,
+            content: m.content,
+            images: m.images || [],
+            city: m.city,
+            topicName: m.topicName,
+            likeCount: m.likeCount || 0,
+            liked: !!m.liked
+          })
+        }
+        for (const e of (es && es.list) || []) {
+          list.push({
+            kind: 'invite',
+            id: e.id,
+            createdAt: e.createdAt,
+            content: e.content,
+            images: e.images || [],
+            city: e.city,
+            theme: e.theme,
+            eventDate: e.eventDate,
+            hot: e.hot || 0,
+            joinCount: e.joinCount || 0,
+            pile: e.pile || [],
+            joined: !!e.joined
+          })
+        }
+        list.sort((a, b) => {
+          const ta = parseTime(a.createdAt)
+          const tb = parseTime(b.createdAt)
+          return (tb ? tb.getTime() : 0) - (ta ? ta.getTime() : 0)
+        })
+        this.dynList = list
+        this.dynHasMore = ((ms && ms.total) || 0) + ((es && es.total) || 0) > list.length
+      } catch (e) {
+        this.dynList = []
+        this.dynHasMore = false
+      }
+    },
+    dayNum(it) {
+      const t = parseTime(it.createdAt)
+      return t ? String(t.getDate()) : ''
+    },
+    monthText(it) {
+      const t = parseTime(it.createdAt)
+      return t ? `${t.getMonth() + 1}月` : ''
+    },
+    yearText(it) {
+      const t = parseTime(it.createdAt)
+      return t ? `${t.getFullYear()}年` : ''
+    },
+    /** 官方：年份仅在与相邻（前一条）不同年份、且非当前年时显示 */
+    showYear(i) {
+      const cur = new Date().getFullYear()
+      const t = parseTime(this.dynList[i].createdAt)
+      if (!t || t.getFullYear() === cur) return false
+      const prev = i > 0 ? parseTime(this.dynList[i - 1].createdAt) : null
+      return !(prev && prev.getFullYear() === t.getFullYear())
+    },
+    headText(it) {
+      return it.content || ''
+    },
+    /** 照片网格：列数 1 /(2|4→2)/ 3，官方间距 4dip */
+    photoStyle(it) {
+      const n = (it.images || []).length
+      let w = 192
+      let h = 192
+      let r = 12
+      if (n === 1) {
+        r = 16
+        if (it.kind === 'invite') {
+          w = 496
+          h = 372
+        } else {
+          w = 364
+          h = 436
+        }
+      } else if (n === 2 || n === 4) {
+        w = 240
+        h = 240
+        r = 10
+      }
+      return { width: `${w}rpx`, height: `${h}rpx`, borderRadius: `${r}rpx` }
+    },
+    capsActivity(it) {
+      return it.kind === 'invite' ? it.theme || '邀约' : it.topicName || '动态'
+    },
+    capsDay(it) {
+      const d = it.kind === 'invite' ? it.eventDate : it.createdAt
+      const ds = formatTime(d).slice(0, 10)
+      return `${ds}  ${it.city || ''}`.trim()
+    },
+    hotTag(it) {
+      const n = Number(it.hot) || 0
+      let i = 1
+      if (n > 9) i = 2
+      if (n > 99) i = 3
+      if (n > 999) i = 4
+      if (n > 9999) i = 5
+      return `/static/official/ic_hot_tag${i}.png`
+    },
+    hotValue(it) {
+      const n = Number(it.hot) || 0
+      return n > 9999 ? '热度·9999+' : `热度·${n}`
+    },
+    /** ic_hot_tag1~5 切图宽度（xxhdpi px ÷3 = dip，×2 = rpx） */
+    hotBgStyle(it) {
+      const n = Number(it.hot) || 0
+      let i = 0
+      if (n > 9) i = 1
+      if (n > 99) i = 2
+      if (n > 999) i = 3
+      if (n > 9999) i = 4
+      const widths = [120, 136, 148, 162, 176]
+      return { width: `${widths[i]}rpx`, height: '52rpx' }
+    },
+    async dynLike(it) {
+      if (it.kind !== 'moment') return
+      try {
+        const r = await momentApi.like(it.id)
+        it.liked = !!(r && r.liked)
+        if (r && r.likeCount !== undefined) it.likeCount = r.likeCount
+      } catch (e) {
+        /* 已提示 */
+      }
+    },
+    async dynJoin(it) {
+      if (it.kind !== 'invite' || it.joined) return
+      try {
+        await inviteEventApi.join(it.id)
+        it.joined = true
+        it.joinCount = (it.joinCount || 0) + 1
+        toast('报名成功')
+      } catch (e) {
+        /* 已提示 */
+      }
+    },
+    dynReport(it) {
+      const type = it.kind === 'invite' ? 'invite_event' : 'moment'
+      nav(`/pages/report/report?targetId=${it.id}&targetType=${type}`)
+    },
+    previewDyn(it, pi) {
+      const list = (it.images || []).map((u) => mediaUrl(u))
+      previewImage(list, list[pi])
+    },
+    toMoreDynamic() {
+      this.dynPageSize += 20
+      this.loadDynamic()
     },
     tagBg(i) {
       return TAGS_BG_COLOR[i % TAGS_BG_COLOR.length]
@@ -1144,11 +1408,254 @@ export default {
   font-size: 26rpx;
 }
 
-/* ============ 公共：动态邀约 ============ */
+/* ============ 公共：动态邀约 detail_bottom ============ */
 .dyn-sec {
   padding: 40rpx 30rpx 0;
   background: #ffffff;
 }
+.dyn-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dyn-head__icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 18rpx;
+}
+.dyn-head__title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #171716;
+}
+.dyn-head__spacer {
+  flex: 1;
+}
+.dyn-head__more {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dyn-head__more-text {
+  font-size: 24rpx;
+  color: #b7b7b7;
+}
+.dyn-head__more-arrow {
+  width: 8rpx;
+  height: 14rpx;
+  margin-left: 12rpx;
+}
+.dyn-list {
+  margin-top: 20rpx;
+}
+.dyn-item {
+  display: flex;
+  flex-direction: column;
+}
+/* 时间头 */
+.dyn-item__head {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-top: 10rpx;
+}
+.dyn-item__day {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #181716;
+  line-height: 1;
+}
+.dyn-item__month {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #181716;
+  margin-left: 4rpx;
+}
+.dyn-item__year {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #181716;
+  margin-left: 10rpx;
+}
+.dyn-item__spacer {
+  flex: 1;
+}
+.dyn-item__report {
+  align-self: center;
+  padding: 30rpx 20rpx;
+}
+.dyn-item__report-icon {
+  width: 8rpx;
+  height: 36rpx;
+}
+/* 竖线 + 内容列 */
+.dyn-item__body {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+}
+.dyn-item__line {
+  width: 2rpx;
+  background: #e5e5e5;
+  margin-left: 28rpx;
+  margin-right: 44rpx;
+  align-self: stretch;
+}
+.dyn-item__col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.dyn-item__tag {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: #30302f;
+  line-height: 1.2;
+}
+.dyn-item__tag--invite {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+/* 照片网格 */
+.dyn-photos {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8rpx;
+}
+.dyn-photos__img {
+  display: block;
+}
+/* 活动 + 时间胶囊 */
+.dyn-caps {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.dyn-caps--invite {
+  margin-bottom: 36rpx;
+}
+.caps__box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 52rpx;
+  border-radius: 16rpx;
+  background: #f8f8f8;
+}
+.caps__box--day {
+  margin-left: 40rpx;
+}
+.caps__icon {
+  width: 18rpx;
+  height: 20rpx;
+  margin-left: 16rpx;
+}
+.caps__text {
+  font-size: 24rpx;
+  color: #61605f;
+  margin-left: 8rpx;
+  margin-right: 18rpx;
+}
+/* 底部：动态（点赞 + 举报） */
+.dyn-foot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+.dyn-like {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 86rpx;
+}
+.dyn-like__icon {
+  width: 32rpx;
+  height: 36rpx;
+}
+.dyn-like__count {
+  font-size: 24rpx;
+  color: #828282;
+  margin-left: 8rpx;
+}
+.dyn-report {
+  margin-left: auto;
+  margin-right: 4rpx;
+  padding: 30rpx 20rpx;
+}
+/* 底部：邀约（热度 + 立即报名） */
+.dyn-hot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 76rpx;
+  border-radius: 16rpx;
+  background: #fff6f2;
+  margin-left: 76rpx;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+}
+.dyn-pile {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+}
+.dyn-pile__img {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  border: 2rpx solid #ffffff;
+}
+.dyn-pile__img:not(:first-child) {
+  margin-left: -12rpx;
+}
+.dyn-hot__tag {
+  position: relative;
+  margin-left: 10rpx;
+}
+.dyn-hot__bg {
+  display: block;
+}
+.dyn-hot__value {
+  position: absolute;
+  left: 40rpx;
+  top: 0;
+  height: 52rpx;
+  line-height: 52rpx;
+  font-size: 22rpx;
+  color: #ffffff;
+}
+.dyn-hot__spacer {
+  flex: 1;
+}
+.dyn-hot__btn {
+  width: 128rpx;
+  height: 56rpx;
+  border-radius: 20rpx;
+  background: #ff5e13;
+  margin-right: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dyn-hot__btn--joined {
+  background: #ffcdb6;
+}
+.dyn-hot__btn-text {
+  font-size: 22rpx;
+  color: #ffffff;
+}
+.dyn-item__divider {
+  height: 6rpx;
+  background: #f5f5f5;
+  margin-left: 64rpx;
+  margin-right: 14rpx;
+}
+/* 空态 */
 .dyn-empty {
   margin: 20rpx 58rpx 40rpx;
   display: flex;

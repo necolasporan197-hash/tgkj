@@ -84,6 +84,10 @@ router.get(
       cond.push('theme=?')
       params.push(req.query.theme)
     }
+    if (req.query.userId) {
+      cond.push('user_id=?')
+      params.push(Number(req.query.userId))
+    }
     const where = `WHERE ${cond.join(' AND ')}`
     const rows = all(`SELECT * FROM invite_events ${where} ORDER BY id DESC LIMIT ? OFFSET ?`, [...params, pageSize, offset])
     const total = get(`SELECT COUNT(*) c FROM invite_events ${where}`, params).c
