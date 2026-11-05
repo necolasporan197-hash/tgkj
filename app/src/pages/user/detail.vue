@@ -590,10 +590,27 @@ export default {
         })
         this.dynList = list
         this.dynHasMore = ((ms && ms.total) || 0) + ((es && es.total) || 0) > list.length
+        list.forEach((it) => this.probeSinglePhoto(it))
       } catch (e) {
         this.dynList = []
         this.dynHasMore = false
       }
+    },
+    /**
+     * 官方 DetailDynamicItemView.PhotoAdapter：动态项单图按真实宽高比选尺寸
+     * 宽≥高 → item_photo1 248×186dip；否则 item_photo 182×218dip
+     */
+    probeSinglePhoto(it) {
+      if (it.kind !== 'moment' || (it.images || []).length !== 1) return
+      if (it.landscape !== undefined) return
+      it.landscape = false
+      uni.getImageInfo({
+        src: mediaUrl(it.images[0]),
+        success: (r) => {
+          it.landscape = r.width >= r.height
+        },
+        fail: () => {}
+      })
     },
     dayNum(it) {
       const t = parseTime(it.createdAt)
@@ -618,15 +635,19 @@ export default {
     headText(it) {
       return it.content || ''
     },
-    /** 照片网格：列数 1 /(2|4→2)/ 3，官方间距 4dip */
+    /**
+     * 照片尺寸（官方 item_home_photo / 2 / 3 与 item_invite_photo）
+     * 3+ 张 → 103dip(206rpx) 方形；2|4 张 → 120dip(240rpx) 圆角 5dip；
+     * 单张：邀约恒 248×186dip；动态按真实宽高比 248×186(宽≥高) / 182×218dip
+     */
     photoStyle(it) {
       const n = (it.images || []).length
-      let w = 192
-      let h = 192
+      let w = 206
+      let h = 206
       let r = 12
       if (n === 1) {
         r = 16
-        if (it.kind === 'invite') {
+        if (it.kind === 'invite' || it.landscape) {
           w = 496
           h = 372
         } else {
