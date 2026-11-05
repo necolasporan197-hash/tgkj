@@ -56,6 +56,14 @@ export function publicUser(u, viewerId = null) {
     videoNum: photos.filter((p) => p.media_type === 'video').length,
     newUser: u.new_user === 1,
     isConfirmed: u.audit_status === 'approved',
+    // 语音条（官方 DetailAudio：女版详情页「TA的声音」）
+    audioUrl: u.audio_url || '',
+    audioDuration: u.audio_duration || 0,
+    showAudio: u.show_audio === 1,
+    isSelf: !!isSelf,
+    // reportText 两段提示（官方 BaseDetailFragment.initData：show_valid_time / not_confirmed_notice_msg）
+    showValidTime: u.show_valid_time || '',
+    notConfirmedNoticeMsg: isSelf ? '' : configValue('not_confirmed_notice_msg', '该用户尚未完成实名认证，请注意核实身份'),
     // 微信号：VIP 或已解锁可见，否则返回掩码
     wechat: unlocked ? u.wechat || '' : u.wechat ? `${u.wechat.slice(0, 2)}****` : '',
     wechatLocked: !unlocked && !!u.wechat,

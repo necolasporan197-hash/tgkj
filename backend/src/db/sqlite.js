@@ -38,6 +38,12 @@ function ensureColumns() {
     return true
   }
   add('users', 'feeling', 'feeling TEXT') // 感情状态（女用户）
+  // 语音条（官方 DetailAudio / DetailFemaleTopView：女版详情页「TA的声音」）
+  add('users', 'audio_url', 'audio_url TEXT')
+  add('users', 'audio_duration', 'audio_duration INTEGER DEFAULT 0')
+  add('users', 'show_audio', 'show_audio INTEGER DEFAULT 0')
+  // 详情页 reportText 有效期提示（官方 BaseDetailFragment：data.show_valid_time）
+  add('users', 'show_valid_time', 'show_valid_time TEXT')
   // 消息提醒开关（NotifyOpenActivity 的 6 项）
   add('user_settings', 'notify_chat', 'notify_chat INTEGER DEFAULT 1')
   add('user_settings', 'notify_city', 'notify_city INTEGER DEFAULT 1')

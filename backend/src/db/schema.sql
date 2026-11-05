@@ -23,6 +23,10 @@ CREATE TABLE IF NOT EXISTS users (
   height        INTEGER,
   weight        INTEGER,
   feeling       TEXT,                       -- 感情状态（官方 profile_female_basic_fragment，女用户）
+  audio_url     TEXT,                       -- 语音条地址（官方 audio_url，详情页「TA的声音」）
+  audio_duration INTEGER DEFAULT 0,         -- 语音条时长（秒，官方 audio_duration）
+  show_audio    INTEGER DEFAULT 0,          -- 是否展示语音条（官方 show_audio，女版详情页特性开关）
+  show_valid_time TEXT,                     -- 详情页右上有有效提示（官方 show_valid_time）
   role          INTEGER DEFAULT 1,          -- 1=普通女性 2=普通男性 9=客服
   is_vip        INTEGER DEFAULT 0,
   vip_expire_at TEXT,

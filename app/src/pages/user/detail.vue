@@ -1,19 +1,32 @@
 <template>
   <view class="page">
-    <!-- detail_title_bar：share(24×29dip) + empty(20dip) + more(ic_profile_syh) -->
-    <TgNavBar title="个人详情">
-      <template #right>
-        <image class="nav__share" src="/static/official/ic_profile_share_n.png" />
-        <image class="nav__more" src="/static/official/ic_profile_syh.png" @tap="toggleMore" />
-      </template>
-    </TgNavBar>
+    <!-- detail_title_bar：title_bar（透明态）+ title_bar_1（白底态）随滚动交叉淡入淡出 -->
+    <view class="navs">
+      <view class="navs__base" :style="{ opacity: navSolidAlpha }">
+        <TgNavBar title="个人详情" back-icon="/static/official/ic_nav_arrow1_n.png">
+          <template #right>
+            <image class="nav__share" src="/static/official/ic_profile1_share_n.png" />
+            <image class="nav__more" src="/static/official/ic_profile1_syh.png" @tap="toggleMore" />
+          </template>
+        </TgNavBar>
+      </view>
+      <view class="navs__top" :style="{ opacity: navTopAlpha }">
+        <TgNavBar bg-color="transparent" back-icon="/static/official/homepage_arrow_legacy.png">
+          <template #right>
+            <image class="nav__share" src="/static/official/ic_profile_share_n.png" />
+            <image class="nav__more" src="/static/official/ic_profile_syh.png" @tap="toggleMore" />
+          </template>
+        </TgNavBar>
+      </view>
+    </view>
 
-    <scroll-view scroll-y class="scroll">
+    <scroll-view scroll-y class="scroll" @scroll="onScroll">
       <view v-if="loading" class="loading"><text class="loading__text">加载中…</text></view>
 
       <block v-else-if="user">
-        <!-- ============ 被浏览者为女 → detail_female_basic.xml ============ -->
-        <view v-if="viewedIsFemale" class="ftop">
+        <view class="body">
+          <!-- ============ 被浏览者为女 → detail_female_basic.xml ============ -->
+          <view v-if="viewedIsFemale" class="ftop">
           <image class="ftop__img" :src="avatarUrl" mode="aspectFill" @tap="previewAvatar" />
           <view class="ftop__shade" />
 
@@ -141,7 +154,25 @@
             </view>
           </view>
 
-          <view class="gap" />
+          <!-- detail_audio：TA的声音（女版专属，官方 detail_female_basic.xml 位于相册与个性标签之间） -->
+          <view v-if="viewedIsFemale && user.showAudio" class="audio">
+            <view class="audio__title">
+              <image class="audio__title-icon" src="/static/official/homepage_audio.png" />
+              <text class="audio__title-text">TA的声音</text>
+            </view>
+            <view class="audio__bg" :class="{ 'audio__bg--empty': audioEmpty }" @tap="onAudioTap">
+              <image class="audio__play" :src="audioPlayIcon" />
+              <view class="audio__content">
+                <text class="audio__t1">{{ audioTitle1 }}</text>
+                <text class="audio__t2">{{ audioTitle2 }}</text>
+              </view>
+              <image class="audio__wave" src="/static/official/icon_personal_sound.png" />
+              <text class="audio__time" :class="{ 'is-hidden': audioEmpty }">{{ (user.audioDuration || 0) + 'S' }}</text>
+            </view>
+          </view>
+
+          <!-- detail_audio 末尾的 8dip 分隔（仅音频存在时才有） -->
+          <view v-if="viewedIsFemale && user.showAudio" class="gap" />
 
           <!-- detail_tags：个性标签 -->
           <view v-if="tags.length" class="tags-sec">
@@ -175,16 +206,23 @@
           </view>
         </view>
 
-        <!-- ============ 公共：安全提示 detail_tip ============ -->
-        <view class="tip" :class="{ 'tip--inset': viewedIsMale }">
-          <view class="tip__row tip__row--first">
-            <image class="tip__dot" src="/static/official/ic_profile_xinhao.png" />
-            <text class="tip__text"> 请勿通过约会进行不法交易，如被举报核实将被封号处理</text>
+          <!-- ============ 公共：安全提示 detail_tip ============ -->
+          <view class="tip" :class="{ 'tip--inset': viewedIsMale }">
+            <view class="tip__row tip__row--first">
+              <image class="tip__dot" src="/static/official/ic_profile_xinhao.png" />
+              <text class="tip__text"> 请勿通过约会进行不法交易，如被举报核实将被封号处理</text>
+            </view>
+            <view class="tip__row">
+              <image class="tip__dot" src="/static/official/ic_profile_xinhao.png" />
+              <text class="tip__text">如对方信息不实或进行广告营销行为，可点击</text>
+              <text class="tip__link" @tap="toReport">【快速举报】</text>
+            </view>
           </view>
-          <view class="tip__row">
-            <image class="tip__dot" src="/static/official/ic_profile_xinhao.png" />
-            <text class="tip__text">如对方信息不实或进行广告营销行为，可点击</text>
-            <text class="tip__link" @tap="toReport">【快速举报】</text>
+
+          <!-- ============ reportText：官方 detail_female_basic / detail_male_basic 右对齐徽标 ============ -->
+          <view v-if="reportTextVisible" class="rpt" :class="{ 'rpt--m': viewedIsMale }">
+            <image class="rpt__icon" :src="reportTextIcon" />
+            <text class="rpt__text">{{ reportTextText }}</text>
           </view>
         </view>
       </block>
@@ -252,7 +290,9 @@ export default {
       user: null,
       loading: true,
       moreOpen: false,
-      navBottom: 0
+      audioPlaying: false,
+      navBottom: 0,
+      scrollTop: 0
     }
   },
   computed: {
@@ -266,6 +306,32 @@ export default {
     /** 被浏览者为男（我方编码 1=男）→ DetailMaleFragment */
     viewedIsMale() {
       return !!this.user && this.user.gender === 1
+    },
+    /** 浏览者（当前登录用户）非女 → 对应官方 EnumUtil.isOppositeFemale() */
+    viewerIsMale() {
+      return this.store.gender !== 2
+    },
+    /**
+     * reportText 三段（官方 BaseDetailFragment.initData L267-285）：
+     * ① show_valid_time 非空 → 锁图标 + show_valid_time
+     * ② 被浏览者为女 && 浏览者为男 && 被浏览者未认证 → 未认证图标 + not_confirmed_notice_msg
+     * ③ 其余 → 隐藏
+     */
+    reportTextVisible() {
+      const u = this.user
+      if (!u) return false
+      if (u.showValidTime) return true
+      return this.viewedIsFemale && this.viewerIsMale && !u.isConfirmed
+    },
+    reportTextIcon() {
+      const u = this.user || {}
+      return u.showValidTime
+        ? '/static/official/ic_female_detail_lock.png'
+        : '/static/official/icon_tips_not_confirm.png'
+    },
+    reportTextText() {
+      const u = this.user || {}
+      return u.showValidTime || u.notConfirmedNoticeMsg || ''
     },
     avatarUrl() {
       const a = this.user && this.user.avatar
@@ -314,6 +380,33 @@ export default {
     },
     albumPhotos() {
       return ((this.user && this.user.photos) || []).slice(0, 6)
+    },
+    /** detail_audio：本人查看且无语音条 → 官方的「添加语音条」占位态 */
+    audioEmpty() {
+      return this.isSelf && !(this.user && this.user.audioUrl)
+    },
+    audioPlayIcon() {
+      if (this.audioPlaying) return '/static/official/button_personal_play2.png'
+      return this.audioEmpty ? '/static/official/pic_personal_upload.png' : '/static/official/button_personal_play1.png'
+    },
+    audioTitle1() {
+      return this.audioEmpty ? '添加语音条' : '她的语音条'
+    },
+    audioTitle2() {
+      return this.audioEmpty ? '添加语音后，更易获得关注哦~' : '听听她说了什么~'
+    },
+    /* 官方 BaseDetailFragment.scrolllOffset：titleBar（透明态）与 titleBar1（白底态）随滚动交叉渐隐 */
+    navTopAlpha() {
+      const i = this.scrollTop
+      if (i > 1000) return 0
+      if (i < 50) return 1
+      return Math.floor((i * 256) / 1000) / 256
+    },
+    navSolidAlpha() {
+      const i = this.scrollTop
+      if (i > 1000) return 1
+      if (i < 50) return 0
+      return Math.max(0, 1 - Math.floor((i * 256) / 1000) / 256 - 0.5)
     }
   },
   onLoad(q) {
@@ -325,6 +418,12 @@ export default {
     this.navBottom = (sys.statusBarHeight || 0) + Math.round((88 * sys.screenWidth) / 750)
     this.id = Number(q.id) || 0
     this.load()
+  },
+  onUnload() {
+    if (this._audio) {
+      this._audio.destroy()
+      this._audio = null
+    }
   },
   methods: {
     async load() {
@@ -342,6 +441,10 @@ export default {
     },
     tagColor(i) {
       return TAGS_TEXT_COLOR[i % TAGS_TEXT_COLOR.length]
+    },
+    /* 官方 scrolllOffset：随 scroll-view 滚动更新标题栏交叉渐隐（单位 dip 与 px 近似，阈值 50/1000 直接沿用） */
+    onScroll(e) {
+      this.scrollTop = e.detail.scrollTop
     },
     previewAvatar() {
       previewImage([this.avatarUrl], this.avatarUrl)
@@ -408,6 +511,32 @@ export default {
       }
       if (this.user.wechat) copy(this.user.wechat)
     },
+    /** 播放/暂停语音条（官方 DetailAudio 的 rl_bg 点击） */
+    onAudioTap() {
+      const url = this.user && this.user.audioUrl
+      // 本人无语音条 → 官方跳「我的语音条」管理页（本端未实现，忽略）
+      if (!url) return
+      if (!this._audio) {
+        this._audio = uni.createInnerAudioContext()
+        this._audio.onEnded(() => {
+          this.audioPlaying = false
+        })
+        this._audio.onStop(() => {
+          this.audioPlaying = false
+        })
+        this._audio.onError(() => {
+          this.audioPlaying = false
+        })
+      }
+      if (this.audioPlaying) {
+        this._audio.pause()
+        this.audioPlaying = false
+      } else {
+        this._audio.src = mediaUrl(url)
+        this._audio.play()
+        this.audioPlaying = true
+      }
+    },
     toChat() {
       nav(`/pages/chat/chat?peerId=${this.id}`)
     },
@@ -437,10 +566,30 @@ export default {
 
 <style lang="scss" scoped>
 .page {
+  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
   background: #f7f7f7;
+}
+/* detail_title_bar：透明态与白底态叠放，随滚动交叉渐隐 */
+.navs {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 30;
+}
+.navs__base {
+  position: relative;
+  z-index: 1;
+}
+.navs__top {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
 }
 /* detail_title_bar 右区：share 24×24dip=48rpx；more ic_profile_syh 4×18dip=8×36rpx */
 .nav__share {
@@ -455,6 +604,39 @@ export default {
 .scroll {
   flex: 1;
   height: 0;
+}
+/* 滚动内容容器：与官方 NestedScrollView 内的 FrameLayout 对应，作为 reportText 的定位参考 */
+.body {
+  position: relative;
+}
+/* reportText：layout_gravity=right + marginTop 100dip，bg_detail_report（#33000000，左上/左下圆角 18dip） */
+.rpt {
+  position: absolute;
+  right: 0;
+  top: 200rpx;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 14rpx 18rpx;
+  background: #33000000;
+  border-top-left-radius: 36rpx;
+  border-bottom-left-radius: 36rpx;
+}
+/* 男版 padding：L16/T9/R9/B9dip */
+.rpt--m {
+  padding: 18rpx 18rpx 18rpx 32rpx;
+}
+/* tips_icon：12×14dip，marginRight 10dip */
+.rpt__icon {
+  width: 24rpx;
+  height: 28rpx;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+}
+.rpt__text {
+  font-size: 24rpx;
+  color: #ffffff;
 }
 
 /* ============ 女：basic_top 450dip（900rpx） ============ */
@@ -713,6 +895,78 @@ export default {
   color: #ff61605f;
   margin-left: 8rpx;
   margin-right: 20rpx;
+}
+
+/* ============ 女：TA的声音（detail_audio.xml，位于相册与个性标签之间） ============ */
+.audio {
+  background: #ffffff;
+}
+.audio__title {
+  margin-top: 36rpx;
+  padding: 0 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.audio__title-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 18rpx;
+}
+.audio__title-text {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #171716;
+}
+/* rl_bg：bg_personal_sound，四周 margin 15dip */
+.audio__bg {
+  position: relative;
+  height: 144rpx;
+  margin: 30rpx;
+  background-image: url('/static/official/bg_personal_sound.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.audio__bg--empty {
+  background-image: url('/static/official/bg_personal_sound2.png');
+}
+/* iv_play：button_personal_play1（70×72dip），左 14dip */
+.audio__play {
+  width: 140rpx;
+  height: 144rpx;
+  margin-left: 28rpx;
+  flex-shrink: 0;
+}
+.audio__content {
+  margin-left: 24rpx;
+  display: flex;
+  flex-direction: column;
+}
+.audio__t1 {
+  font-size: 28rpx;
+  color: #ffffff;
+}
+.audio__t2 {
+  margin-top: 14rpx;
+  font-size: 24rpx;
+  color: #ffffddc5;
+}
+.audio__wave {
+  margin-left: auto;
+  margin-right: 20rpx;
+  width: 144rpx;
+  height: 66rpx;
+}
+.audio__time {
+  margin-right: 100rpx;
+  font-size: 30rpx;
+  color: #ffffff;
+}
+.audio__time.is-hidden {
+  visibility: hidden;
 }
 
 /* ============ 公共：相册（detail_photo_view） ============ */

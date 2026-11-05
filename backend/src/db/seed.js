@@ -310,8 +310,9 @@ function insertUser({ gender, idx, audit, city: cityOverride }) {
   const newUser = idx % 3 === 0 ? 1 : 0
   const r = run(
     `INSERT INTO users (phone, password_hash, nickname, avatar, gender, birthday, age, city, occupation, bio,
-      role, coins, balance, invite_code, audit_status, status, online, lat, lng, last_active_at, new_user, created_at, updated_at)
-     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+      role, coins, balance, invite_code, audit_status, status, online, lat, lng, last_active_at, new_user,
+      audio_url, audio_duration, show_audio, created_at, updated_at)
+     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
     [
       phone,
       hashPassword('123456'),
@@ -334,6 +335,10 @@ function insertUser({ gender, idx, audit, city: cityOverride }) {
       121.4 + Math.random(),
       t,
       newUser,
+      // 语音条（官方 DetailAudio）：仅女用户带「TA的声音」
+      isFemale ? `${DEMO_IMG}/voice.mp3` : '',
+      isFemale ? 6 : 0,
+      isFemale ? 1 : 0,
       t,
       t
     ]
