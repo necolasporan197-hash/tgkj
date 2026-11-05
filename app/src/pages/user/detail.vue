@@ -231,15 +231,20 @@
                   >
 
                   <view v-if="(it.images || []).length" class="dyn-photos">
-                    <image
+                    <view
                       v-for="(p, pi) in it.images.slice(0, 9)"
                       :key="pi"
-                      class="dyn-photos__img"
+                      class="dyn-photos__box"
                       :style="photoStyle(it)"
-                      :src="mediaUrl(p)"
-                      mode="aspectFill"
-                      @tap.stop="onDynPhotoTap(it, pi)"
-                    />
+                    >
+                      <image
+                        class="dyn-photos__img"
+                        :src="mediaUrl(p)"
+                        mode="aspectFill"
+                        @tap.stop="onDynPhotoTap(it, pi)"
+                      />
+                      <text v-if="inviteStatus(it)" class="dyn-photos__status">{{ inviteStatus(it) }}</text>
+                    </view>
                   </view>
 
                   <view class="dyn-caps" :class="{ 'dyn-caps--invite': it.kind === 'invite' }">
@@ -634,6 +639,16 @@ export default {
         r = 10
       }
       return { width: `${w}rpx`, height: `${h}rpx`, borderRadius: `${r}rpx` }
+    },
+    /**
+     * 官方 DetailInviteItemView.PhotoAdapter：照片卡片右上角 tv_status
+     * 「组局中」；is_past_due → 隐藏（审核失败/审核中 仅 isSelf 可见，本区块仅异性浏览故不可达）
+     */
+    inviteStatus(it) {
+      if (it.kind !== 'invite') return ''
+      const t = parseTime(it.eventDate)
+      if (t && t.getTime() < Date.now()) return ''
+      return '组局中'
     },
     capsActivity(it) {
       return it.kind === 'invite' ? it.theme || '邀约' : it.topicName || '动态'
@@ -1540,8 +1555,29 @@ export default {
   flex-wrap: wrap;
   gap: 8rpx;
 }
+.dyn-photos__box {
+  position: relative;
+  overflow: hidden;
+}
 .dyn-photos__img {
   display: block;
+  width: 100%;
+  height: 100%;
+}
+/* 照片卡片右上角 tv_status（item_invite_photo.xml：20dip 高 / 11sp bold / #99000000 / 圆角 1-8-1-8dip） */
+.dyn-photos__status {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  height: 40rpx;
+  padding: 0 12rpx;
+  border-radius: 2rpx 16rpx 2rpx 16rpx;
+  background-color: #99000000;
+  color: #ffffff;
+  font-size: 22rpx;
+  font-weight: bold;
 }
 /* 活动 + 时间胶囊 */
 .dyn-caps {
