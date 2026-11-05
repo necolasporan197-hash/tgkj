@@ -219,8 +219,8 @@
                 </view>
               </view>
 
-              <!-- 竖线 + 内容列 -->
-              <view class="dyn-item__body">
+              <!-- 竖线 + 内容列（官方 cardView + llTag → InviteDetailFragment2） -->
+              <view class="dyn-item__body" @tap="dynBodyTap(it)">
                 <view class="dyn-item__line" />
                 <view class="dyn-item__col">
                   <text
@@ -238,7 +238,7 @@
                       :style="photoStyle(it)"
                       :src="mediaUrl(p)"
                       mode="aspectFill"
-                      @tap="previewDyn(it, pi)"
+                      @tap.stop="onDynPhotoTap(it, pi)"
                     />
                   </view>
 
@@ -284,7 +284,7 @@
                   <text class="dyn-hot__value">{{ hotValue(it) }}</text>
                 </view>
                 <view class="dyn-hot__spacer" />
-                <view class="dyn-hot__btn" :class="{ 'dyn-hot__btn--joined': it.joined }" @tap="dynJoin(it)">
+                <view class="dyn-hot__btn" :class="{ 'dyn-hot__btn--joined': it.joined }" @tap.stop="dynJoin(it)">
                   <text class="dyn-hot__btn-text">{{ it.joined ? '已报名' : '立即报名' }}</text>
                 </view>
               </view>
@@ -695,6 +695,20 @@ export default {
     previewDyn(it, pi) {
       const list = (it.images || []).map((u) => mediaUrl(u))
       previewImage(list, list[pi])
+    },
+    /** 官方 DetailInviteItemView：cardView / llTag / 照片 item → InviteDetailFragment2（邀约详情） */
+    toInviteDetail(it) {
+      if (!it || !it.id) return
+      nav(`/pages/invite/detail?id=${it.id}`)
+    },
+    /** 内容区点击：仅邀约项可点（动态项官方 tag 区无点击） */
+    dynBodyTap(it) {
+      if (it && it.kind === 'invite') this.toInviteDetail(it)
+    },
+    /** 官方：动态项照片 → UrlViewerFragment 大图预览；邀约项照片 → InviteDetailFragment2 */
+    onDynPhotoTap(it, pi) {
+      if (it && it.kind === 'invite') this.toInviteDetail(it)
+      else this.previewDyn(it, pi)
     },
     toMoreDynamic() {
       this.dynPageSize += 20
